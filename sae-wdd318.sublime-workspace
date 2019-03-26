@@ -1,0 +1,1581 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"current",
+				"currentColor"
+			],
+			[
+				"anim",
+				"animate\t.animate() with callback"
+			],
+			[
+				"data-",
+				"data-sample\t(contact.html)"
+			],
+			[
+				"valida",
+				"validateAgainstRegex"
+			],
+			[
+				"remove",
+				"removeClass\t.removeClass()"
+			],
+			[
+				"addEven",
+				"addEventListenersToEverything"
+			],
+			[
+				"galery_",
+				"galery__thumbs"
+			],
+			[
+				"select",
+				"selectOrReturn"
+			],
+			[
+				"appendChi",
+				"appendChildTo"
+			],
+			[
+				"appendCh",
+				"appendChildrenTo"
+			],
+			[
+				"galery",
+				"galery__navigation\t(styles.css)"
+			],
+			[
+				"kommt",
+				"kommtVor"
+			],
+			[
+				"random",
+				"randomNumber"
+			],
+			[
+				"selec",
+				"selector"
+			],
+			[
+				"data",
+				"data-example-value"
+			],
+			[
+				"valid",
+				"validateAgainstRegex"
+			],
+			[
+				"elemtn",
+				"elementSelector"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"queryselect",
+				"querySelectorAll"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"saluta",
+				"salutation-female\t(index.html)"
+			],
+			[
+				"map",
+				"mapOnProperty"
+			],
+			[
+				"filety",
+				"filetypes"
+			],
+			[
+				"baseCa",
+				"baseCategories"
+			],
+			[
+				"base",
+				"baseConstraints"
+			],
+			[
+				"filet",
+				"filetypes"
+			],
+			[
+				"file",
+				"filetypeConstraints"
+			],
+			[
+				"baseCategor",
+				"baseCategoryConstraints"
+			],
+			[
+				"getBase",
+				"getBaseCategoryConstraints"
+			],
+			[
+				"indexer",
+				"indexerConfig"
+			],
+			[
+				"tx",
+				"tx_kesearch_indexerconfig"
+			],
+			[
+				"tx_im",
+				"tx_imgdb_categories"
+			],
+			[
+				"filem",
+				"file_metadata"
+			],
+			[
+				"redo",
+				"record"
+			],
+			[
+				"TYPO",
+				"TYPO3_DB"
+			],
+			[
+				"Extension",
+				"ExtensionManagementUtility\t(RealUrlAutoConfiguration.php)"
+			],
+			[
+				"getREq",
+				"getRequestAndSession"
+			],
+			[
+				"tx_img",
+				"tx_imgdb_pi1\t(RealUrlAutoConfiguration.php)"
+			],
+			[
+				"session",
+				"sessionUtility"
+			],
+			[
+				"sessin",
+				"sessionUtility"
+			],
+			[
+				"LLL",
+				"LLL:EXT:imgdb"
+			],
+			[
+				"keyword",
+				"keywordUpdated"
+			],
+			[
+				"keywordInTitl",
+				"keywordInTitleResults"
+			],
+			[
+				"Media",
+				"MediaRepository"
+			],
+			[
+				"key",
+				"keywords"
+			],
+			[
+				"findMedai",
+				"findMediaIndexer\t(MediaRepository.php)"
+			],
+			[
+				"baseCateg",
+				"baseCategoryUid"
+			],
+			[
+				"Keywor",
+				"KeywordsearchIndexerAdditionalFieldProvider〔class〕"
+			],
+			[
+				"Keyword",
+				"KeywordsearchIndexerTask\t(KeywordsearchIndexerTask.php)"
+			],
+			[
+				"Reposi",
+				"Repository"
+			],
+			[
+				"keywordSearc",
+				"keywordsearchRepository"
+			],
+			[
+				"object",
+				"objectManager"
+			],
+			[
+				"parent",
+				"parentObject"
+			],
+			[
+				"submited",
+				"$submittedData〔variable〕"
+			],
+			[
+				"keywor",
+				"keywords_without_results"
+			],
+			[
+				"keyw",
+				"keywordsearchRepository"
+			],
+			[
+				"number",
+				"number_of_results"
+			],
+			[
+				"LL",
+				"LLL:EXT:imgdb"
+			],
+			[
+				"local",
+				"locallang.xlf:tca.domain.model.keywordsearch.title"
+			],
+			[
+				"Ty",
+				"TYPO3_MODE\t(tx_imgdb_domain_model_keywordsearch.php)"
+			],
+			[
+				"keywordse",
+				"keywordsearch"
+			],
+			[
+				"exec",
+				"execute"
+			],
+			[
+				"search",
+				"searchinput"
+			],
+			[
+				"getChos",
+				"getShowOnlyCreativeCommons〔function〕"
+			],
+			[
+				"tx_",
+				"tx_imgdb_domain_model_keywordsearch"
+			],
+			[
+				"TYO",
+				"TYPO3_MODE\t(ext_localconf.php)"
+			],
+			[
+				"Ext",
+				"Extbase\t(ext_localconf.php)"
+			],
+			[
+				"MYSQL_R",
+				"MYSQL_ROOT_PASSWORD\t(setup.sh)"
+			],
+			[
+				"MYSQL_ROOT",
+				"MYSQL_ROOT_USER\t(setup.sh)"
+			],
+			[
+				"A",
+				"AdditionalConfiguration"
+			],
+			[
+				"MYSQL",
+				"MYSQL_DATABASE"
+			],
+			[
+				"Wibs",
+				"WibsImgdb"
+			],
+			[
+				"wibs",
+				"WibsImgdb〔namespace〕"
+			],
+			[
+				"EXT",
+				"EXT_KEY"
+			],
+			[
+				"header",
+				"headerData"
+			],
+			[
+				"import",
+				"import.override.ifEmpty.cObject"
+			],
+			[
+				"wrap",
+				"wrapItemAndSub"
+			],
+			[
+				"MYSQLI",
+				"MYSQLI_INSTALLED"
+			],
+			[
+				"maria",
+				"mariadb"
+			],
+			[
+				"T",
+				"TYPO3-Distribution"
+			],
+			[
+				"docekr",
+				"docker-entrypoint-initdb.d\t(docker-compose.yml)"
+			],
+			[
+				"bash",
+				"bash_aliases"
+			],
+			[
+				"save",
+				"save_options"
+			],
+			[
+				"manifes",
+				"manifest.json"
+			],
+			[
+				"icon",
+				"icon_256.png\t(manifest.json)"
+			],
+			[
+				"categor",
+				"category_color"
+			],
+			[
+				"get_current_ca",
+				"get_current_category_archive_colors"
+			],
+			[
+				"category_color",
+				"category_color_extended"
+			],
+			[
+				"default-font-",
+				"default-font-color"
+			],
+			[
+				"f-si",
+				"font-size"
+			],
+			[
+				"cm",
+				"content-margin"
+			],
+			[
+				"container",
+				"container-padding"
+			],
+			[
+				"comment-meta-autho",
+				"comment-meta-author-url\t(style.css)"
+			],
+			[
+				"comments",
+				"comments-title-size"
+			],
+			[
+				"share-cont",
+				"share-content-padding"
+			],
+			[
+				"default-trigger-",
+				"default-trigger-color-disabled"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"comments-",
+				"comments-loadmore-trigger"
+			],
+			[
+				"figure-marg",
+				"figure-margin"
+			],
+			[
+				"figure",
+				"figure-margin"
+			],
+			[
+				"bootsr",
+				"bootstrap-mobile-breakpoint"
+			],
+			[
+				"a",
+				"af\t:after"
+			],
+			[
+				"bootstrap",
+				"bootstrap-mobile-breakpoint"
+			],
+			[
+				"figure-margin",
+				"figure-margin-thumbnail"
+			],
+			[
+				"entry-meta-item",
+				"entry-meta-item-margin"
+			],
+			[
+				"default-font",
+				"default-font-color"
+			],
+			[
+				"entry-meta",
+				"entry-meta-margin-bottom"
+			],
+			[
+				"default-font-siz",
+				"default-font-size-small"
+			],
+			[
+				"bb",
+				"border-bottom"
+			],
+			[
+				"article",
+				"article-margin-bottom"
+			],
+			[
+				"content",
+				"content-heading-margin-top-list"
+			],
+			[
+				"content-head",
+				"content-heading-margin-bottom-list"
+			],
+			[
+				"h1",
+				"h1-font-weight"
+			],
+			[
+				"breadc",
+				"breadcrumbs-margin"
+			],
+			[
+				"bread",
+				"breadcrumbs-margin-top"
+			],
+			[
+				"menu-item-margin",
+				"menu-item-margin-right-active"
+			],
+			[
+				"menu-item-border",
+				"menu-item-border-bottom-active"
+			],
+			[
+				"menu-item-pad",
+				"menu-item-padding-left-active"
+			],
+			[
+				"menu-item-link",
+				"menu-item-link-padding-top-bottom"
+			],
+			[
+				"menu",
+				"menu-item-padding"
+			],
+			[
+				"men",
+				"menu-main-navigation\t(style.css)"
+			],
+			[
+				"default",
+				"default-border-bottom"
+			],
+			[
+				"logo",
+				"logo-url"
+			],
+			[
+				"img",
+				"img-directory"
+			],
+			[
+				"logged",
+				"logged-in-marin-top"
+			],
+			[
+				"gnf_custom",
+				"gnf_custom_excerpt_more"
+			],
+			[
+				"exc",
+				"excerpt"
+			],
+			[
+				"excer",
+				"excerpt_length"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nMinify\n------\n\n  Version 1.2.8\n  -------------\n  \n  * Bug fix by : Ashutosh Sharma aka ashucg. See: https://github.com/tssajo/Minify/pull/71\n      It fixes the following issues:\n      https://github.com/tssajo/Minify/issues/56\n      https://github.com/tssajo/Minify/issues/59\n      (Thank you, ashucg!)\n  \n  \n  # IMPORTANT! #\n  \n  ## It is highly recommended to upgrade to the latest version of clean-css-cli !!\n  \n  Please open a shell (`Terminal` on Mac OS X, `CMD window` on Windows) and issue the following command:\n  \n      npm install -g clean-css-cli uglifycss js-beautify html-minifier uglify-js minjson svgo\n  \n  followed by:\n  \n      npm update -g clean-css-cli uglifycss js-beautify html-minifier uglify-js minjson svgo\n",
+			"settings":
+			{
+				"buffer_size": 782,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"close all",
+				"File: Close All"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"riend",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"browser",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"rename ta",
+				"Emmet: Rename Tag"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"expand",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set tml",
+				"Set Syntax: HTML"
+			],
+			[
+				"set html5",
+				"Snippet: html5"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"eind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"vali",
+				"W3C Validators: Validate HTML5"
+			],
+			[
+				"validate",
+				"W3C Validators: Validate HTML5"
+			],
+			[
+				"reidin",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"closeal",
+				"File: Close All"
+			],
+			[
+				"save all",
+				"File: Save All"
+			],
+			[
+				"new vie",
+				"File: New View into File"
+			],
+			[
+				"set ph",
+				"Set Syntax: PHP"
+			],
+			[
+				"new v",
+				"File: New View into File"
+			],
+			[
+				"terminal",
+				"Terminal: Open in project folder"
+			],
+			[
+				"wrap",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"new view",
+				"File: New View into File"
+			],
+			[
+				"close al",
+				"File: Close All"
+			],
+			[
+				"yml",
+				"Set Syntax: YAML"
+			],
+			[
+				"sublimecon",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"codeintel",
+				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"sniff this file",
+				"PHP Coding Standards Fixer: Fix this file (PHP Code Beautifier)"
+			],
+			[
+				"sniff",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"php",
+				"PHPCompanion:Find Use"
+			],
+			[
+				"scan",
+				"PHPIntel: Scan Project"
+			],
+			[
+				"remove packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Emmet: Remove Tag"
+			],
+			[
+				"REIND",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"save ",
+				"File: Save All"
+			],
+			[
+				"set ya",
+				"Set Syntax: YAML"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"convert to spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"comment",
+				"Snippet: comment"
+			],
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"build",
+				"Build: New Build System"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"set bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"set python",
+				"Set Syntax: Python"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"new vi",
+				"File: New View into File"
+			],
+			[
+				"set python3",
+				"Set Syntax: Python3"
+			],
+			[
+				"convert to space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert to sace",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert to tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"set markdown",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"convert to sp",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"settings default",
+				"Preferences: Settings - Default"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"set typon",
+				"Set Syntax: Python"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"select",
+				"Bookmarks: Select All"
+			],
+			[
+				"set xml",
+				"Set Syntax: XML"
+			],
+			[
+				"new ",
+				"File: New View into File"
+			],
+			[
+				"remove tag",
+				"Emmet: Remove Tag"
+			],
+			[
+				"linter err",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"convert tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tag",
+				"Emmet: Remove Tag"
+			],
+			[
+				"reint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fave",
+				"File: Save All"
+			],
+			[
+				"rend",
+				"BracketHighlighter: Enable Debug Mode"
+			],
+			[
+				"newvi",
+				"File: New View into File"
+			],
+			[
+				"reinf",
+				"Terminal: Open in project folder"
+			],
+			[
+				"align",
+				"Snippet: alignement"
+			],
+			[
+				"convert to ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"convert to",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"set t",
+				"Set Syntax: TypoScript"
+			],
+			[
+				"set typo",
+				"Set Syntax: TypoScript"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"toggle com",
+				"Toggle Comment"
+			],
+			[
+				"comm",
+				"Snippet: comment"
+			],
+			[
+				"theme",
+				"Themr: List themes"
+			],
+			[
+				"u",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"upgrade ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"mini",
+				"Minify Javascript to file"
+			],
+			[
+				"set javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set java",
+				"Set Syntax: Java"
+			],
+			[
+				"project",
+				"Project: Close"
+			],
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"liast pack",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"terminale",
+				"TerminalProjectFolder: open terminal"
+			],
+			[
+				"set apache",
+				"Set Syntax: Apache Conf"
+			],
+			[
+				"set con",
+				"Set Syntax: Git Config"
+			],
+			[
+				"emmet",
+				"Set Syntax: Emmet"
+			],
+			[
+				"riein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"termin",
+				"TerminalProjectFolder: open terminal"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"new ve",
+				"File: New View into File"
+			],
+			[
+				"colorpic",
+				"Color Picker"
+			],
+			[
+				"instak",
+				"Package Control: Install Package"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"schem",
+				"Schemr: List all schemes"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"termina",
+				"TerminalProjectFolder: open terminal"
+			],
+			[
+				"UPGRADE",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"set plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pretty json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"list a",
+				"Package Control: List Packages"
+			],
+			[
+				"inden",
+				"Auto indent"
+			],
+			[
+				"set plan",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pacage",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"settypo",
+				"Set Syntax: TypoScript"
+			],
+			[
+				"tidy",
+				"Tidy CSS (Highest Compression)"
+			]
+		],
+		"width": 487.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"exit",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alexander/repos/sae-wdd318"
+	],
+	"file_history":
+	[
+		"/home/alexander/repos/sae/WDD317/oop/uebungen/bestellung.php",
+		"/home/alexander/Dropbox/Rock Of Ages/Musik/Partituren/4_I Wanna Rock/4_I Wanna Rock_transponiert -3.txt",
+		"/home/alexander/Dropbox/Titan Killer/Press & Media/Promo/auswahl.txt",
+		"/home/alexander/Dropbox/Rock Of Ages/20190112.txt",
+		"/home/alexander/Dokumente/66bb3a92-f8a4-4425-b0a8-cc0501113eb6",
+		"/home/alexander/.config/Typora/conf/conf.user.json",
+		"/home/alexander/.config/Typora/conf/conf.default.json",
+		"/home/alexander/Dropbox/Rock Of Ages/einige punkte.txt",
+		"/home/alexander/.openfortigui/logs/vpn/WiBS.log",
+		"/home/alexander/Videos/checksum.md5",
+		"/home/alexander/repos/laravel-sae/src/node_modules/laravel-mix/setup/webpack.config.js",
+		"/home/alexander/repos/laravel-sae/src/package.json",
+		"/home/alexander/repos/laravel-sae/docker-compose.yml",
+		"/home/alexander/repos/laravel-sae/.env",
+		"/home/alexander/repos/laravel-sae/setup/setup.sh",
+		"/home/alexander/.cache/.fr-xncv1m/postgresql-dkkplattform.sql",
+		"/home/alexander/.cache/.fr-QgqHsX/postgresql-dkkplattform.sql",
+		"/home/alexander/.cache/.fr-d4AOe7/postgresql-dkkplattform.sql",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/PageTS/TCEFORM.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/Partials/sidebar.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/Helper/DynamicContent.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/setup.txt",
+		"/home/alexander/repos/wibs/lehrerweb/docker-compose.yml",
+		"/home/alexander/repos/wibs/lehrerweb/src/ext_emconf.php",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Templates/Page/Prefilled.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Partials/Page/Share.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TCA/Overrides/tt_content.php",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/PageTS/Mod/tx_news.txt",
+		"/home/alexander/repos/wibs/wibs_workshops/Classes/Domain/Repository/FacilityRepository.php",
+		"/home/alexander/repos/wibs/wibs_workshops/Classes/Controller/FacilityController.php",
+		"/home/alexander/repos/wibs/lehrerweb/src/Classes/Domain/.gitkeep",
+		"/home/alexander/repos/wibs/lehrerweb/src/Classes/ViewHelpers/CommentCountViewHelper.php",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TCA/Overrides/pages.php",
+		"/home/alexander/repos/wibs/wibs/src/Configuration/TypoScript/setup.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Ext/tx_news/Partials/Grid/Item.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/PageTS/Mod/WebLayout/BackendLayouts/prefilled.txt",
+		"/home/alexander/repos/wibs/wibs_workshops/Classes/Domain/Repository/OfferRepository.php",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Templates/Page/Default.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/Partials/pageheader.txt",
+		"/var/www/html/newsletter/index.php",
+		"/var/www/html/newsletter/logic.php",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD5100/WBD5100_form1_Konzept Custom CMS/flowchart flows.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/constants.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/Ext/tx_news.txt",
+		"/home/alexander/repos/wibs/lehrerweb/src/Configuration/TypoScript/Ext/felogin.txt",
+		"/home/alexander/Bilder/Wildhunt Gig/erasorhead.sh",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Ext/tx_wibsworkshops/Templates/Offer/Show.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Public/Css/layout.css.map",
+		"/home/alexander/repos/wibs/lehrerweb/src/Build/Gruntfile.js",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Public/Less/layout.less",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Public/Css/layout.css",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Public/Css/layout.min.css",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Private/Ext/tx_wibsworkshops/Templates/Facility/Show.html",
+		"/home/alexander/repos/wibs/lehrerweb/src/Resources/Public/Less/variables.less",
+		"/home/alexander/.cache/.fr-VDmUtx/home/alexander/.ssh/config",
+		"/home/alexander/.ssh/config",
+		"/home/alexander/.cache/.fr-amC1PH/home/alexander/.ssh/config",
+		"/home/alexander/.cache/.fr-8OJTeI/home/alexander/.ssh/config",
+		"/home/alexander/.cache/.fr-BGvVIB/home/alexander/repos/lehrerweb/.git/config",
+		"/home/alexander/repos/battle-axe/node_modules/owl.carousel/package.json",
+		"/home/alexander/repos/battle-axe/package.json",
+		"/home/alexander/repos/battle-axe/static/css/styles.css",
+		"/home/alexander/repos/battle-axe/static/js/init.js",
+		"/home/alexander/Dropbox/WebDesign & Entwicklung/WebDesign/Battle Axe/Ode To The Battle Axe.txt",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-10-05_WBD4300_JavaScript/index.html",
+		"/home/alexander/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings",
+		"/home/alexander/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/css/styles.css",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/js/init.js",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-09-14_WBD4300_JavaScript/Slider_2017_09_5/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/js/slider.js",
+		"/home/alexander/Dokumente/Gallery_Animiert_mit_Richtung/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form2_JS Formvalidierung/src/validator.js",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/contact.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/js/validator.js",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-31_WBD4300_JavaScript/Gallery_Template/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_sum1_JavaScript Website/src/img/coat_background.svg",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form3_JS Bildergalerie/src/styles.css",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form3_JS Bildergalerie/src/gallery.js",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form3_JS Bildergalerie/src/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form3_JS Bildergalerie/src/reset.css",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form3_JS Bildergalerie/JS Bildergalerie.sublime-project",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/5_select_stuff_and_alter_stuff/4_remove_one.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/5_select_stuff_and_alter_stuff/3_select_all_but.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/5_select_stuff_and_alter_stuff/2_select_all_of.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/5_select_stuff_and_alter_stuff/1_select_and_add_class.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/5_select_stuff_and_alter_stuff/0_select_and_add_class.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/4_create_stuff/4_create_element_text_mix.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/4_create_stuff/3_create_multiple_elements.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/4_create_stuff/2_create_element.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/4_create_stuff/1_add_attributes.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/4_create_stuff/0_add_text.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/6_replace_all.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/5_find_and_replace.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/4_find_the_number.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/3_find_the_digit.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/2_lots_of_numbers.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/1_escaping.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Hausübungen/WBD4300/2017-08-22_WBD4300_JavaScript/3_strings/0_escaping.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/6_2d_array.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/5_sum.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/4_sotieren2.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/3_sortieren.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/2_capitalize.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/1_gerade_vs_ungerade.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Mitschriften/WBD4300/2017-08-17_WBD4300_JavaScript/7_arrays/0_first_array.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form2_JS Formvalidierung/src/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form2_JS Formvalidierung/src/styles.css",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form2_JS Formvalidierung/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form2_JS Formvalidierung/js formvalidierung.sublime-project",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form1_Responsive Layout/html/index.html",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form1_Responsive Layout/css/styles.css",
+		"/home/alexander/Dropbox/SAE/2017-18/Abgaben & Prüfungen/WBD4300/WBD4300_form1_Responsive Layout/js/init.js",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Controller/MediaController.php",
+		"/home/alexander/Dropbox/Software/Guitar Pro 6/official/Lizenz.txt",
+		"/home/alexander/repos/wibs_imgdb/setup/build.sh",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Hooks/KeSearchCustomIndexerHook.php",
+		"/home/alexander/Dokumente/JfeTND6HdD.etherpad",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Task/KeywordsearchIndexerAdditionalFieldProvider.php",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Task/KeywordsearchGarbageCollectorTask.php",
+		"/home/alexander/repos/wibs_imgdb/src/Resources/Private/Language/locallang.xlf",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Domain/Model/MediaMetaData.php",
+		"/home/alexander/repos/wibs_imgdb/src/ext_typoscript_setup.txt",
+		"/home/alexander/repos/wibs_imgdb/src/Configuration/PageTSconfig/main.txt",
+		"/home/alexander/repos/wibs_imgdb/src/Configuration/TypoScript/setup.txt",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Domain/Model/Media.php",
+		"/home/alexander/repos/wibs_imgdb/src/Classes/Domain/Repository/MediaRepository.php"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								782,
+								782
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"default_dir": "/home/alexander/repos/sae-wdd318",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "sae-wdd318.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"init.js",
+				"wibs_imgdb/Resources/Public/Scripts/init.js"
+			],
+			[
+				"sm-min",
+				"git/css/sm-min.css"
+			],
+			[
+				"styles",
+				"git/css/styles.css"
+			],
+			[
+				"sm.css",
+				"git/css/sm.css"
+			],
+			[
+				"main.css",
+				"template/css/main.css"
+			],
+			[
+				"main",
+				"template/css/main.css"
+			],
+			[
+				"xs.",
+				"template/css/xs.css"
+			],
+			[
+				"front",
+				"template/html/frontpage.html"
+			],
+			[
+				"index",
+				"template/html/index.html"
+			],
+			[
+				"scroll",
+				"template/js/jquery.scrollToTop.js"
+			],
+			[
+				"md-m",
+				"template/css/md-min.css"
+			],
+			[
+				"md-mi",
+				"template/css/md-min.css"
+			],
+			[
+				"lg",
+				"template/css/lg.css"
+			],
+			[
+				"md.",
+				"template/css/md.css"
+			],
+			[
+				"sm.",
+				"template/css/sm.css"
+			],
+			[
+				"sm",
+				"template/css/sm-min.css"
+			],
+			[
+				"lg.",
+				"template/css/lg.css"
+			],
+			[
+				"lg.cs",
+				"template/css/lg.css"
+			],
+			[
+				"md",
+				"template/css/md.css"
+			],
+			[
+				"main.s",
+				"template/css/main.css"
+			],
+			[
+				"search",
+				"template/js/jquery.searchbox.js"
+			],
+			[
+				"xs",
+				"template/css/xs.css"
+			],
+			[
+				"ain.css",
+				"template/css/main.css"
+			],
+			[
+				"jquery.scrollto",
+				"template/css/jquery.scrollToTop.css"
+			],
+			[
+				"min.css",
+				"template/css/sm-min.css"
+			],
+			[
+				"jquery.scroll",
+				"template/css/jquery.scrollToTop.css"
+			],
+			[
+				"jquery.",
+				"FlexSlider/jquery.flexslider.js"
+			],
+			[
+				"scrolltotop.js",
+				"template/js/old/jquery.scrollToTop.js"
+			],
+			[
+				"top",
+				"template/js/old/jquery.scrollToTop.js"
+			],
+			[
+				"inde",
+				"template/html/index.html"
+			],
+			[
+				"min",
+				"template/css/sm-min.css"
+			],
+			[
+				"desk",
+				"template/css/desktop.css"
+			],
+			[
+				"overl",
+				"template/js/jquery.overlayCaption.js"
+			],
+			[
+				"ove",
+				"template/js/jquery.overlayCaption.js"
+			],
+			[
+				"over",
+				"template/js/jquery.overlayCaption.js"
+			],
+			[
+				"overlay",
+				"template/js/jquery.overlayCaption.js"
+			],
+			[
+				"index.html",
+				"template/html/index.html"
+			],
+			[
+				"ie",
+				"template/css/IE.css"
+			],
+			[
+				"nav.js",
+				"template/js/nav.js"
+			],
+			[
+				"light",
+				"frontend_js/lightbox.js"
+			],
+			[
+				"show",
+				"new_template/dev.wibs.at/css/Show.css"
+			],
+			[
+				"show.html",
+				"new_template/dev.wibs.at/Show.html"
+			],
+			[
+				"overla",
+				"new_template/dev.wibs.at/js/overlay.js"
+			],
+			[
+				"mediacon",
+				"wibs_dammediadb/Classes/Controller/MediaController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/repos/docker-grav/docker-grav.sublime-project"
+			],
+			[
+				"imgdb",
+				"~/repos/wibs_imgdb/imgdb.sublime-workspace"
+			],
+			[
+				"bu",
+				"~/repos/privat/bullet-journal/bullet-journal.sublime-project"
+			],
+			[
+				"mw-p",
+				"/home/ahofbauer/repos/privat/mw-packages/mw-packages.sublime-workspace"
+			],
+			[
+				"wibs",
+				"~/repos/wibs/wibs.sublime-project"
+			],
+			[
+				"smar",
+				"~/repos/smartKids/smartkids.sublime-workspace"
+			],
+			[
+				"smart",
+				"~/repos/smartKids/smartkids.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 96.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"tx_wibsdammediadb_domain_repo",
+				"Tx_WibsDammediadb_Domain_Repository_KeywordsearchRepository"
+			]
+		],
+		"width": 809.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 318.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
