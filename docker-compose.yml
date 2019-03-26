@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  apache:
+    image: php:apache
+    volumes:
+      - './:/var/www/html/' # DO NOT use this mapping in production environments! NEVER! NO!
+    ports:
+      - 8080:80
+    links:
+      - mariadb:db
+
+  mariadb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    env_file:
+      - .env
+
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin
+     links:
+       - mariadb:db
+     depends_on:
+       - mariadb
+     ports:
+       - 8081:80
+     environment:
+       PMA_ARBITRARY: 0
