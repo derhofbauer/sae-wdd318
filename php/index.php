@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-    <main class="content">
+    <main class="content container">
         <?php
 
         $default = 'content/home.php';
