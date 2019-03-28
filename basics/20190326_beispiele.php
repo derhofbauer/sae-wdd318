@@ -81,4 +81,22 @@ do {
     echo "foobar"; // gibt 1x "foobar" aus
 } while (false);
 
+// strpos
+$haystack = "Heuhaufen";
+$needle = "haufen";
+
+$strpos = strpos($haystack, $needle);
+echo $strpos;
+echo "<br>";
+
+// strtolower
+$uppercaseString = "WohOOO!";
+$lowercaseString = strtolower($uppercaseString);
+echo $lowercaseString;
+echo "<br>";
+
+// strtoupper
+$uppercaseString = strtoupper($lowercaseString);
+echo $uppercaseString;
+
 ?>
