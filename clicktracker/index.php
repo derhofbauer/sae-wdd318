@@ -1,3 +1,8 @@
+<?php
+session_start();
+var_dump($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +26,15 @@ $nav = [
     foreach ($nav as $url => $label) {
         $redirect_url = "redirect.php?url=" . urlencode($url);
 
+        if (
+            isset($_SESSION['clicked'][$url]) &&
+            $_SESSION['clicked'][$url] === true
+        ) {
+            $label .= ' - wurde bereits geklickt';
+        }
+
         echo "<li>
-            <a targert=\"_blank\" href=\"$redirect_url\">
+            <a target=\"_blank\" href=\"$redirect_url\">
             $label
             </a>
         </li>";
