@@ -1,3 +1,7 @@
+<?php
+require_once 'validator.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,14 @@
         </div>
 
         <div class="form-group">
-            <label for="phone">Telefon</label>
+            <label for="phone">Telefon (DACH)</label>
+            <?php
+
+                if (isset($errors['phone'])) {
+                    echo "<p class=\"error\">{$errors['phone']}</p>";
+                }
+
+            ?>
             <input type="tel" name="phone" id="phone">
         </div>
 
