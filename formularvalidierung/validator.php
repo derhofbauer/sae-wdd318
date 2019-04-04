@@ -8,7 +8,7 @@ $errors = [];
 $phone = $_POST['phone'];
 $exp = "/^(\+|00){1}[ ]?(41|43|49){1}([0-9 ]{4,})([\-\/]?[0-9]{1,4})?/";
 
-if (!preg_match($exp, $phone)) {
+if (isset($_POST['phone']) && !preg_match($exp, $phone)) {
     $errors['phone'] = "Bitte geben Sie eine vernünftige Telefonnummer ein.";
 }
 
