@@ -83,7 +83,7 @@ CREATE TABLE `orders` (
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `price` decimal(10,0) NOT NULL,
+  `price` decimal NOT NULL,
   `stock` int(11) NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `image` text COLLATE utf8_unicode_ci NOT NULL
@@ -109,7 +109,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `birthday`, `phone`) VALUES
-(1, 'Robin Glaeser', 'robingl@hotmail.com', 'test123', '2019-04-02', '06644687722');
+(1, 'Arthur Dent', 'arthur.dent@galaxy.com', 'test123', '2019-04-02', '06644687722');
 
 --
 -- Indizes der exportierten Tabellen
