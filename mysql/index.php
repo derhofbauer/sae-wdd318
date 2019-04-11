@@ -8,16 +8,22 @@ require_once 'dbconnect.php';
 <!-- Aufgabe 1: alle Produkte aus der Datenbank auslesen und ähnlich wie das hier
     ausgeben -->
 <div class="products">
-    <div class="product product-1">
-        <img src="product_images/image1.jpg" alt="Product Title">
-        <div class="title">Product Title</div>
-        <div class="price">9.99 €</div>
-    </div>
-    <div class="product product-2">
-        <img src="product_images/image2.jpg" alt="Product Title">
-        <div class="title">Product Title</div>
-        <div class="price">9.99 €</div>
-    </div>
+    <?php
+
+        $sql = "SELECT id,name,images,price FROM products WHERE images != '';";
+
+        $result = mysqli_query($link, $sql);
+
+        while ($row = mysqli_fetch_assoc($result)): ?>
+
+
+            <div class="product product-<?php echo $row['id']; ?>">
+                <img src="<?php echo $row['images']; ?>" alt="<?php echo $row['name']; ?>" style="max-width: 100px;">
+                <div class="title"><?php echo $row['name']; ?></div>
+                <div class="price"><?php echo $row['price']; ?> €</div>
+            </div>
+    
+    <?php endwhile; ?>
 </div>
 
 
