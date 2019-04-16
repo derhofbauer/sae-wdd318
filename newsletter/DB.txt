@@ -1,0 +1,22 @@
+# Anforderungen
+
++ anmeldung
++ eingetragene user pro thema
++ themen
++ fe-/be-user
+
+
+# Datentabellen
+
++ User
+    + id
+    + email
+    + password
+    + is_admin
++ Themen
+    + id
+    + name
++ Abos
+    + id
+    + themen_id
+    + user_id
