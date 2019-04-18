@@ -12,6 +12,10 @@ require_once 'subscribe.php';
 
 <h1>Newsletter</h1>
 
+<?php if (isset($success) && $success === true): ?>
+    <p class="success">Wohoo! neue Abos!</p>
+<?php endif; ?>
+
 <form action="index.php" method="post">
     
     <div class="form-group">
