@@ -5,7 +5,10 @@
     <title>Newsletter</title>
 </head>
 <body>
-<?php require_once 'dbconnect.php'; ?>
+<?php 
+require_once 'dbconnect.php';
+require_once 'subscribe.php';
+?>
 
 <h1>Newsletter</h1>
 
@@ -19,8 +22,11 @@
     <div class="form-group">
 
         <?php
+        $stmt = mysqli_stmt_init($link);
         $sql = "SELECT * FROM topics;";
-        $result = mysqli_query($link, $sql);
+        mysqli_stmt_prepare($stmt, $sql);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
 
         while ($row = mysqli_fetch_assoc($result)) {
 
@@ -40,6 +46,8 @@
     <div class="form-group">
         <button class="btn btn-primary">Subscribe</button>
     </div>
+
+
 
 </form>
     
