@@ -35,10 +35,6 @@
 
         }
         ?>
-
-        <label>
-            <input type="checkbox" name="topic" value="1"> Topic
-        </label>
     </div>
 
     <div class="form-group">
