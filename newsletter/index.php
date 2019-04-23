@@ -39,6 +39,7 @@ require_once 'subscribe.php';
             $html[] = '<label>';
             $html[] = "<input type=\"checkbox\" name=\"topic-{$row['id']}\" value=\"{$row['id']}\"> {$row['name']}";
             $html[] = '</label>';
+            $html[] = "<a href=\"subscribers.php?topic_id={$row['id']}\" />Show Subscribers</a>";
             $html[] = '</div>';
 
             echo implode($html, '');
