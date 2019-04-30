@@ -17,12 +17,13 @@ class DB {
  * @param  string $sql
  * @param  array  $params ['i:id' => 2, 's:name' => "Thomas"]
  */
-    public function query($sql, array $params) {
+public function query($sql, array $params = []) {
         // query abschicken
         // $this->stmt = $this->link->stmt_init();
-        $this->stmt = $this->link->prepare($sql);
+    $this->stmt = $this->link->prepare($sql);
 
-        // prepare params
+        // prepare params if there is at least one
+    if (count($params)) {
         $types = '';
         $param_values = [];
         foreach ($params as $key => $value) {
@@ -39,29 +40,30 @@ class DB {
         // bind params
         array_unshift($param_values, $types); // params: ['is', 2, 'Thomas']
         call_user_func_array([$this->stmt, 'bind_param'], $param_values); // $this->stmt->bind_param($params[0], $params[1], $params[2], .....);
+    }
 
         // execute query
-        $this->stmt->execute();
+    $this->stmt->execute();
 
         // get result
-        $result = $this->stmt->get_result();
+    $result = $this->stmt->get_result();
 
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }
-
-    public function __destruct () {
-        // Datenbankverbindung schließen
-        $this->link->close();
-    }
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-$host = 'mariadb'; // bei MAMP/XAMPP/etc.: localhost
-$user = 'newsletter';
-$pass = 'password';
-$dbname = 'newsletter';
-$db = new DB($host, $user, $pass, $dbname);
+public function __destruct () {
+        // Datenbankverbindung schließen
+    $this->link->close();
+}
+}
 
-$users = $db->query('SELECT * FROM users WHERE id = ?', ['i:id' => 1]);
-var_dump($users);
+// $host = 'mariadb'; // bei MAMP/XAMPP/etc.: localhost
+// $user = 'newsletter';
+// $pass = 'password';
+// $dbname = 'newsletter';
+// $db = new DB($host, $user, $pass, $dbname);
+
+// $users = $db->query('SELECT * FROM users WHERE id = ?', ['i:id' => 1]);
+// var_dump($users);
 
 ?>
