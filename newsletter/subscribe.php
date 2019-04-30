@@ -16,7 +16,7 @@ $success = false;
 // mysqli_stmt_close($stmt);
 
 $result = $db->query("SELECT id,count(*) as count FROM users WHERE email = ?", [
-    's:email' => $email;
+    's:email' => $email
 ])
 var_dump($result);
 
