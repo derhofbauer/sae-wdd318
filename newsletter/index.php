@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php 
-require_once 'dbconnect.php';
+require_once 'autoloader.php';
 require_once 'subscribe.php';
 ?>
 
@@ -26,20 +26,23 @@ require_once 'subscribe.php';
     <div class="form-group">
 
         <?php
-        $stmt = mysqli_stmt_init($link);
-        $sql = "SELECT * FROM topics;";
-        mysqli_stmt_prepare($stmt, $sql);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+        // $stmt = mysqli_stmt_init($link);
+        // $sql = "SELECT * FROM topics;";
+        // mysqli_stmt_prepare($stmt, $sql);
+        // mysqli_stmt_execute($stmt);
+        // $result = mysqli_stmt_get_result($stmt);
+
+        $result = $db->query("SELECT * FROM topics;", []);
 
         while ($row = mysqli_fetch_assoc($result)) {
+            $topic = new Topic($row['id'], $row['name']);
 
             $html = [];
             $html[] = '<div>';
             $html[] = '<label>';
-            $html[] = "<input type=\"checkbox\" name=\"topic-{$row['id']}\" value=\"{$row['id']}\"> {$row['name']}";
+            $html[] = "<input type=\"checkbox\" name=\"topic-{$topic->getId()}\" value=\"{$topic->getId()}\"> {$topic->getName()}";
             $html[] = '</label>';
-            $html[] = "<a href=\"subscribers.php?topic_id={$row['id']}\" />Show Subscribers</a>";
+            $html[] = "<a href=\"subscribers.php?topic_id={$topic->getId()}\" />Show Subscribers</a>";
             $html[] = '</div>';
 
             echo implode($html, '');
@@ -55,7 +58,5 @@ require_once 'subscribe.php';
 
 
 </form>
-    
-<?php require_once 'dbclose.php'; ?>
 </body>
 </html>
