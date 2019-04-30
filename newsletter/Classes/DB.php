@@ -48,6 +48,10 @@ class DB {
         // get result
         $result = $this->stmt->get_result();
 
+        if (is_bool($result)) {
+            return $result;
+        }
+
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
