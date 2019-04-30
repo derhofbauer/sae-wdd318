@@ -17,7 +17,7 @@ $success = false;
 
 $result = $db->query("SELECT id,count(*) as count FROM users WHERE email = ?", [
     's:email' => $email
-])
+]);
 var_dump($result);
 
 
