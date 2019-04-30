@@ -34,7 +34,7 @@ require_once 'subscribe.php';
 
         $result = $db->query("SELECT * FROM topics;", []);
 
-        while ($row = mysqli_fetch_assoc($result)) {
+        foreach ($result as $row) {
             $topic = new Topic($row['id'], $row['name']);
 
             $html = [];
