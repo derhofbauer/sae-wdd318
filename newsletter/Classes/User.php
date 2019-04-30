@@ -1,0 +1,39 @@
+<?php 
+
+class User {
+    protected $id;
+    protected $email;
+    protected $password_hash;
+
+    public function __construct(int $id, $email, $password_hash) {
+        $this->id = $id;
+        $this->email = (string)$email;
+        $this->password_hash = (string)$password_hash;
+    }
+
+    public function setId (int $id) {
+        $this->id = $id;
+    }
+
+    public function getId () {
+        return $this->id;
+    }
+
+    public function setEmail ($email) {
+        $this->email = (string)$email;
+    }
+
+    public function getEmail () {
+        return $this->email;
+    }
+
+    public function setPasswordHash ($password_hash) {
+        $this->password_hash = (string)$password_hash;
+    }
+
+    public function checkPassword ($password_input) {
+        // ...
+    }
+}
+
+?>
