@@ -5,15 +5,21 @@ $topics = [];
 $success = false;
 
 // gibts einen user mit der mail adresse bereits?
-$stmt = mysqli_stmt_init($link);
-mysqli_stmt_prepare($stmt, "SELECT id,count(*) as count FROM users WHERE email = ?");
-mysqli_stmt_bind_param($stmt, "s", $email);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-$row = mysqli_fetch_assoc($result);
-$count = $row['count'];
-$user_id = $row['id'];
-mysqli_stmt_close($stmt);
+// $stmt = mysqli_stmt_init($link);
+// mysqli_stmt_prepare($stmt, "SELECT id,count(*) as count FROM users WHERE email = ?");
+// mysqli_stmt_bind_param($stmt, "s", $email);
+// mysqli_stmt_execute($stmt);
+// $result = mysqli_stmt_get_result($stmt);
+// $row = mysqli_fetch_assoc($result);
+// $count = $row['count'];
+// $user_id = $row['id'];
+// mysqli_stmt_close($stmt);
+
+$result = $db->query("SELECT id,count(*) as count FROM users WHERE email = ?", [
+    's:email' => $email;
+])
+var_dump($result);
+
 
 if ($count < 1) { // wenn es weniger als einen User mit der Email adresse gibt
     // user anlegen
