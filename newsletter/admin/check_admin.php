@@ -9,7 +9,7 @@ if (
     !is_int($_SESSION['user_id'])
 ) {
    // wir sind nicht eingeloggt und mögen das nachholen
-    header('Location: index.php');    
+    header('Location: index.php');
 }
 
 ?>

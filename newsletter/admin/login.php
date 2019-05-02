@@ -32,7 +32,7 @@ if (isset($_POST) && isset($_POST['email']) && isset($_POST['password'])) {
         if ($user->checkPassword($_POST['password'])) {
             session_start();
             $_SESSION['logged_in'] = true;
-            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user_id'] = $user->getId();
 
             header('Location: index.php');
             exit; // nicht nötig, alles was danach kommt, muss nicht mehr ausgeführt werden

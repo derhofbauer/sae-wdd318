@@ -4,7 +4,7 @@ class Topic {
     protected $id;
     protected $name;
 
-    public function __construct (int $id, $name) {
+    public function __construct (int $id, $name = '') {
         $this->id = $id;
         $this->name = (string)$name;
     }
@@ -18,7 +18,7 @@ class Topic {
     }
 
     public function setName ($name) {
-        $this->name = (string)$name;
+        $this->name = (string)trim($name);
     }
 
     public function getName () {
