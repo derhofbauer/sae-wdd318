@@ -1,8 +1,7 @@
 <?php
-    require_once '../dbconnect.php';
+    require_once '../autoloader.php';
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,19 +27,21 @@
         <p>logged in</p>
         // liste aller topics
         <?php
-        $stmt = mysqli_stmt_init($link);
-        $sql = "SELECT * FROM topics;";
-        mysqli_stmt_prepare($stmt, $sql);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+        // $stmt = mysqli_stmt_init($link);
+        // $sql = "SELECT * FROM topics;";
+        // mysqli_stmt_prepare($stmt, $sql);
+        // mysqli_stmt_execute($stmt);
+        // $result = mysqli_stmt_get_result($stmt);
+        $topics = $db->query('SELECT * FROM topics', []);
 
-        while ($row = mysqli_fetch_assoc($result)) {
+        foreach ($topics as $topic) {
+            $currentTopic = new Topic($topic['id'], $topic['name']);
 
             $html = [];
             $html[] = '<ul>';
-            $html[] = "<li>{$row['name']} - ";
-            $html[] = "<a href=\"edit_topic.php?topic_id={$row['id']}\" />Edit</a>";
-            $html[] = "<a href=\"delete_topic.php?topic_id={$row['id']}\" />Delete</a>";
+            $html[] = "<li>{$currentTopic->getName()} - ";
+            $html[] = "<a href=\"edit_topic.php?topic_id={$currentTopic->getId()}\" />Edit</a>";
+            $html[] = "<a href=\"delete_topic.php?topic_id={$currentTopic->getId()}\" />Delete</a>";
             $html[] = '</li>';
             $html[] = '</ul>';
 
@@ -52,6 +53,3 @@
     <?php endif; ?>
 </body>
 </html>
-<?php
-    require_once '../dbclose.php';
-?>

@@ -4,8 +4,9 @@ class User {
     protected $id;
     protected $email;
     protected $password_hash;
+    protected $is_admin = false;
 
-    public function __construct(int $id, $email, $password_hash) {
+    public function __construct(int $id, $email, $password_hash = '') {
         $this->id = $id;
         $this->email = (string)$email;
         $this->password_hash = (string)$password_hash;
@@ -32,7 +33,16 @@ class User {
     }
 
     public function checkPassword ($password_input) {
-        // ...
+        $is_password_ok = password_verify($password_input, $this->password_hash);
+        return $is_password_ok;
+    }
+
+    public function getIsAdmin () {
+        return (bool)$this->is_admin;
+    }
+
+    public function setIsAdmin (bool $is_admin) {
+        $this->is_admin = $is_admin;
     }
 }
 
