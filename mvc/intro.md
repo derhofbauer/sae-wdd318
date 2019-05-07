@@ -1,7 +1,7 @@
 MVC - Model/View/Controller
 ===========================
 
-## Modles 
+## Models 
 
 + Topic
 + User
