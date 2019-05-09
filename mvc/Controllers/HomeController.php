@@ -3,7 +3,11 @@
 class HomeController {
 
     public function index() {
-        echo "hallo, ich bin ein mvc";
+        $params = [
+            'htmltitle' => 'Startseite'
+        ];
+
+        load_view('home', $params);
     }
 
 }

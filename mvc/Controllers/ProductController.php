@@ -2,7 +2,8 @@
 
 class ProductController {
 
-    public function list () {
+    public function show (int $id) {
+        var_dump($id);
         echo "Product list";
     }
     
