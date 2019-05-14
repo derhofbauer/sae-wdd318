@@ -22,6 +22,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/mvc/products">Products</a>
             </li>
+            <li class="nav-item">
+                <a href="/mvc/cart" class="nav-link">Cart</a>
+            </li>
         </ul>
     </div>
 </nav>

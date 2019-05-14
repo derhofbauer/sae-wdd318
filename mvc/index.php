@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+$debug = true;
+if ($debug === true) {
+    ini_set('error_reporting', 'E_ALL');
+    ini_set('display_errors', 'On');
+}
+
 // http://localhost:8080/mvc/index.php?controller=products&action=show&uid=12
 // http://localhost:8080/mvc/products/show/12 --> index.php?path=/products/show/12
 // http://localhost:8080/mvc/admin/index.php NICHT http://localhost:8080/mvc/index.php?path=/admin/index.php
@@ -8,7 +16,6 @@
  * Routes importieren
  */
 require_once 'routes.php';
-
 
 /**
  * welchen Controller brauchen wir?

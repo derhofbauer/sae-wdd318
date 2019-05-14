@@ -4,7 +4,14 @@ class ProductController {
 
     public function show ($id) {
         $id = (int)$id;
-        echo "Product list";
+
+        $product = Product::find($id);
+
+        $params = [
+            'product' => $product
+        ];
+
+        load_view('product.detail', $params);
     }
     
 }

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Class DB
+ *
+ * Sollte eigentlich in einem anderen Ordner liegen, weil es kein klassisches Model ist, ist nur mal der Einfachheit
+ * halber hier.
+ */
 class DB
 {
     protected $link;
