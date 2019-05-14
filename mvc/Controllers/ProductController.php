@@ -2,8 +2,8 @@
 
 class ProductController {
 
-    public function show (int $id) {
-        var_dump($id);
+    public function show ($id) {
+        $id = (int)$id;
         echo "Product list";
     }
     

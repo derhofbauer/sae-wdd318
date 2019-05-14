@@ -64,7 +64,8 @@ spl_autoload_register(function ($className) {
  * @param string $view Format: 'home', 'products/list'
  * @param array  $params
  */
-function load_view(string $view, array $params = []) {
+function load_view (string $view, array $params = [])
+{
     extract($params);
     require_once 'Views/Layouts/' . $view . '.php';
 }
@@ -72,12 +73,8 @@ function load_view(string $view, array $params = []) {
 /**
  * gewünschte Controller/Action mit Parametern aufrufen
  */
-try {
-    $currentController = new $controller();
-    //$currentController->$action(extract($params));
-    call_user_func_array([$controller, $action], $params);
-} catch (Exception $exception) {
-    var_dump($exception->getMessage());
-}
+$currentController = new $controller();
+//$currentController->$action(extract($params));
+call_user_func_array([$controller, $action], $params);
 
 ?>
