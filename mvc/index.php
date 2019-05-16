@@ -74,6 +74,7 @@ spl_autoload_register(function ($className) {
 function load_view (string $view, array $params = [])
 {
     extract($params);
+    $base = "http://localhost:8080/mvc/";
     require_once 'Views/Layouts/' . $view . '.php';
 }
 
