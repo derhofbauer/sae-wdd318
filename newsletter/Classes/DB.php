@@ -14,8 +14,11 @@ class DB {
 
     /**
      * query
-     * @param  string $sql
-     * @param  array  $params ['i:id' => 2, 's:name' => "Thomas"]
+     *
+     * @param string $sql
+     * @param array  $params ['i:id' => 2, 's:name' => "Thomas"]
+     *
+     * @return array
      */
     public function query($sql, array $params = []) {
         // query abschicken

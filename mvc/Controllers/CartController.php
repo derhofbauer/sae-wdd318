@@ -3,9 +3,21 @@
 class CartController {
 
     public function list () {
-        // ...
+        $productIdsInCart = array_keys($_SESSION['cart']);
 
-        $params = [];
+        $products = Product::getByIds($productIdsInCart);
+
+        $total = 0;
+        foreach ($products as $product) {
+            $subtotal = $_SESSION['cart'][$product->id] * $product->price;
+            $total = $total + $subtotal;
+        }
+        $total = round($total, 2);
+
+        $params = [
+            'products' => $products,
+            'total' => $total
+        ];
 
         load_view('cart', $params);
     }
@@ -28,4 +40,20 @@ class CartController {
         exit;
     }
 
+    public static function cartCount () {
+        $cartCount = 0;
+
+        if (isset($_SESSION['cart'])) {
+            foreach ($_SESSION['cart'] as $amount) {
+                $cartCount = $cartCount + $amount;
+            }
+        }
+
+        return $cartCount;
+    }
 }
+
+
+
+
+

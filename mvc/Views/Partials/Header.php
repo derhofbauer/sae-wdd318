@@ -26,6 +26,7 @@
                 <a href="/mvc/cart" class="nav-link">Cart</a>
             </li>
         </ul>
+        <div class="cart">Cart (<?php echo CartController::cartCount(); ?>)</div>
     </div>
 </nav>
 <main>

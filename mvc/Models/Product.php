@@ -9,7 +9,8 @@ class Product
     public $description;
     public $images;
 
-    public function fill($dbResult) {
+    public function fill ($dbResult)
+    {
         $this->id = $dbResult['id'];
         $this->name = $dbResult['name'];
         $this->description = $dbResult['description'];
@@ -22,21 +23,26 @@ class Product
         }, $this->images);
     }
 
+    public static function fillMultiple (array $dbResult)
+    {
+        $products = [];
+
+        foreach ($dbResult as $product) {
+            $p = new Product();
+            $p->fill($product);
+
+            $products[] = $p;
+        }
+
+        return $products;
+    }
+
     public static function all ()
     {
         $db = new DB();
 
         $result = $db->query('SELECT * FROM products');
-        $products = [];
-
-        foreach ($result as $product) {
-            $p = new Product();
-            $p->fill($product);
-
-            array_push($products, $p);
-        }
-
-        return $products;
+        return self::fillMultiple($result);
     }
 
     /**
@@ -58,6 +64,17 @@ class Product
         $p->fill($result[0]);
 
         return $p;
+    }
+
+    public static function getByIds (array $ids)
+    {
+        $db = new DB();
+
+        $ids = implode(',', $ids);
+
+        $result = $db->query("SELECT * FROM products WHERE id IN ({$ids})", []);  // <-- quick und dirty!
+
+        return self::fillMultiple($result);
     }
 }
 
