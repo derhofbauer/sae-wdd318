@@ -14,7 +14,9 @@ $routes = [
     "/products/list" => "ProductController.list",
     "/products/show/:id" => "ProductController.show",
     "/cart" => "CartController.list",
-    "/cart/add/:id" => "CartController.addProduct"
+    "/cart/add/:id" => "CartController.addProduct",
+    "/login" => "LoginController.loginForm",
+    "/logout" => "LoginController.logout"
     // ...
 ];
 

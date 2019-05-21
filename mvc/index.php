@@ -2,6 +2,8 @@
 
 session_start();
 
+define('APP_BASE', "http://localhost:8080/mvc/");
+
 $debug = true;
 if ($debug === true) {
     ini_set('error_reporting', 'E_ALL');
@@ -74,7 +76,7 @@ spl_autoload_register(function ($className) {
 function load_view (string $view, array $params = [])
 {
     extract($params);
-    $base = "http://localhost:8080/mvc/";
+    $base = APP_BASE;
     require_once 'Views/Layouts/' . $view . '.php';
 }
 
