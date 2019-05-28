@@ -11,7 +11,10 @@ class ProductController {
             'product' => $product
         ];
 
-        load_view('product.detail', $params);
+        View::load('product.detail', $params);
     }
-    
+
+    public function list () {
+        die('product list');
+    }
 }

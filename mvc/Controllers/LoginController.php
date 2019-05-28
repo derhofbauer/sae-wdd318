@@ -45,7 +45,7 @@ class LoginController
             }
         }
 
-        load_view('login');
+        View::load('login');
     }
 
     public function logout ()

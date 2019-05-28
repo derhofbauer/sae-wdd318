@@ -54,6 +54,7 @@ foreach ($routes as $route => $controllerDotAction) {
 
 if ($controller === '') {
     die("Route not found!!");
+    // oder: require_once 'errors/404.php';
 }
 
 /**
@@ -63,22 +64,12 @@ spl_autoload_register(function ($className) {
     // Controller file muss genauso heißen wie die Controller-Klasse!!
     @include_once __DIR__ . "/Controllers/{$className}.php";
     @include_once __DIR__ . "/Models/{$className}.php";
+    @include_once __DIR__ . "/Util/{$className}.php";
 
     if (!class_exists($className)) {
         die("Class not found!!");
     }
 });
-
-/**
- * @param string $view Format: 'home', 'products/list'
- * @param array  $params
- */
-function load_view (string $view, array $params = [])
-{
-    extract($params);
-    $base = APP_BASE;
-    require_once 'Views/Layouts/' . $view . '.php';
-}
 
 /**
  * gewünschte Controller/Action mit Parametern aufrufen

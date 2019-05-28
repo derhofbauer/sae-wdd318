@@ -19,7 +19,7 @@ class CartController {
             'total' => $total
         ];
 
-        load_view('cart', $params);
+        View::load('cart', $params);
     }
 
     public function addProduct ($id) {

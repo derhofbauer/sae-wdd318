@@ -10,7 +10,7 @@ class HomeController {
             'products' => $products
         ];
 
-        load_view('home', $params);
+        View::load('home', $params);
     }
 
 }

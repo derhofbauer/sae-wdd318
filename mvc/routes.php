@@ -11,6 +11,7 @@
  */
 $routes = [
     "/" => "HomeController.index",
+    "/products" => "ProductController.list",
     "/products/list" => "ProductController.list",
     "/products/show/:id" => "ProductController.show",
     "/cart" => "CartController.list",
