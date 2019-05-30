@@ -64,12 +64,19 @@ class LoginController
         // ID aus Session auslesen
         $user_id = (int)$_SESSION['user_id'];
 
-        var_dump($_SESSION);
+        $name = '';
 
-        // Name aus Datenbank abfragen
-        $user = User::find($user_id);
+
+        if ($_SESSION['admin'] === true) {
+            $user = Admin::find($user_id);
+            $name = $user->email;
+        } else {
+            // Name aus Datenbank abfragen
+            $user = User::find($user_id);
+            $name = $user->name;
+        }
 
         // Name zurückgeben
-        return $user->name;
+        return $name;
     }
 }

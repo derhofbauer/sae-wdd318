@@ -30,7 +30,7 @@ class Admin extends User
     {
         $db = new DB();
 
-        $result = $db->query('SELECT name FROM admin_users WHERE id = ?', [
+        $result = $db->query('SELECT * FROM admin_users WHERE id = ?', [
             'i:id' => $id
         ]);
 
