@@ -4,7 +4,7 @@ require_once 'check_admin.php';
 
 $topic = new Topic(0);
 
-// wenn topic-formular abgeschickt --> speichern & redirect in Topic-Übersicht /admin/index.php
+// wenn topic-formular abgeschickt --> speichern & redirect in Topic-Übersicht /Admin/index.php
 if (isset($_POST['topic'])) {
     $topic->setName($_POST['topic']);
     if (strlen($topic->getName()) >= 1) {

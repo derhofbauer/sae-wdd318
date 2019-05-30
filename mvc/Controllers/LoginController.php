@@ -66,7 +66,6 @@ class LoginController
 
         $name = '';
 
-
         if ($_SESSION['admin'] === true) {
             $user = Admin::find($user_id);
             $name = $user->email;

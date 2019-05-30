@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/mvc">Shop</a>
+    <a class="navbar-brand" href="admin">Admin</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,24 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="<?php echo $base; ?>">Back To Website</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="products">Products</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="admin/products">Products</a>
             </li>
-            <li class="nav-item">
-                <a href="cart" class="nav-link">Cart (<?php echo CartController::cartCount(); ?>)</a>
-            </li>
-            <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-            <li class="nav-item">
-                <a class="nav-link" href="login">Login</a>
-            </li>
-            <?php endif; ?>
-            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin">Admin</a>
-                </li>
-            <?php endif; ?>
         </ul>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
             <div class="logged_in">
