@@ -21,7 +21,7 @@ require_once 'routes.php';
 /**
  * welchen Controller brauchen wir?
  */
-$path = "/" . $_GET['path'];
+$path = "/" . (isset($_GET['path']) ? $_GET['path'] : '');
 
 $controller = '';
 $action = '';

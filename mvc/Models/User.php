@@ -10,7 +10,7 @@ class User
     public function fill ($dbResult)
     {
         $this->id = $dbResult['id'];
-        $this->name = $dbResult['name'];
+        $this->name = (isset($dbResult['name']) ? $dbResult['name'] : null);
         $this->email = $dbResult['email'];
         $this->password_hash = $dbResult['password'];
     }

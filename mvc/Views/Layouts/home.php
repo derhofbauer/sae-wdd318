@@ -3,7 +3,7 @@
     <div class="row">
         <?php foreach ($products as $product): ?>
             <div class="product col-3">
-                <a href="/mvc/products/show/<?php echo $product->id; ?>">
+                <a href="products/show/<?php echo $product->id; ?>">
                     <?php echo $product->name; ?>
                 </a>
                 <div class="description">

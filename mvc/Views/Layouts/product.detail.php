@@ -5,7 +5,7 @@
         
         <div class="image">
             <?php foreach ($product->images as $image): ?>
-                <img src="<?php echo $image; ?>" alt="<?php echo $product->name; ?>" width="200px">
+                <img src="<?php echo "$base/Assets/$image"; ?>" alt="<?php echo $product->name; ?>" width="200px">
             <?php endforeach; ?>
         </div>
 
@@ -23,7 +23,7 @@
             </div>
         <?php endif; ?>
 
-        <a href="/mvc/cart/add/<?php echo $product->id; ?>" class="btn btn-primary">Add To Cart</a>
+        <a href="cart/add/<?php echo $product->id; ?>" class="btn btn-primary">Add To Cart</a>
 
     </div>
 <?php require_once __DIR__ . '/../Partials/Footer.php'; ?>
