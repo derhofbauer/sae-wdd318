@@ -11,8 +11,7 @@ class DB
     protected $link;
     protected $stmt;
 
-    // public function __construct ($host = 'mariadb', $user = 'shop', $pass = 'password', $dbname = 'shop', $port = 3306) // <-- Alex' config
-    public function __construct ($host = 'localhost', $user = 'shop', $pass = 'password', $dbname = 'shop', $port = 3306)
+    public function __construct ($host = APP_DB_HOST, $user = APP_DB_USER, $pass = APP_DB_PASS, $dbname = APP_DB_NAME, $port = APP_DB_PORT)
     {
 // Datenbankverbindung aufbauen
         $this->link = new mysqli($host, $user, $pass, $dbname, $port);
@@ -55,7 +54,7 @@ class DB
 
 // get result
         $result = $this->stmt->get_result();
-        
+
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 

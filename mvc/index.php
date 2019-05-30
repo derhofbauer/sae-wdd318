@@ -1,12 +1,10 @@
 <?php
 
+require_once __DIR__ . '/config.php';
+
 session_start();
 
-// define('APP_BASE', "http://localhost:8080/mvc/"); <-- Alex' config
-define('APP_BASE', "http://localhost:8888/mvc/"); // <-- muss an euer Wurzelverzeichnis angepasst werden
-
-$debug = true;
-if ($debug === true) {
+if (APP_DEBUG === true) {
     ini_set('error_reporting', 'E_ALL');
     ini_set('display_errors', 'On');
 }
