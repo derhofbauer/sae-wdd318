@@ -2,7 +2,8 @@
 
 session_start();
 
-define('APP_BASE', "http://localhost:8080/mvc/");
+// define('APP_BASE', "http://localhost:8080/mvc/"); <-- Alex' config
+define('APP_BASE', "http://localhost:8888/mvc/"); // <-- muss an euer Wurzelverzeichnis angepasst werden
 
 $debug = true;
 if ($debug === true) {
