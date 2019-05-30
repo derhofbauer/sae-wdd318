@@ -5,7 +5,7 @@ require_once __DIR__ . '/config.php';
 session_start();
 
 if (APP_DEBUG === true) {
-    ini_set('error_reporting', 'E_ALL');
+    ini_set('error_reporting', E_ALL);
     ini_set('display_errors', 'On');
 }
 
@@ -74,7 +74,6 @@ spl_autoload_register(function ($className) {
  * gewünschte Controller/Action mit Parametern aufrufen
  */
 $currentController = new $controller();
-//$currentController->$action(extract($params));
-call_user_func_array([$controller, $action], $params);
+call_user_func_array([$currentController, $action], $params); // <-- @ ist hier quick und sehr sehr dirty!
 
 ?>

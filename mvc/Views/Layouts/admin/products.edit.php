@@ -4,7 +4,7 @@
         <h1>Edit: <?php echo $product->name; ?></h1>
         <div class="row">
 
-            <form action="admin/products/update/<?php echo $product->id; ?>" method="post">
+            <form action="admin/products/update/<?php echo $product->id; ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" value="<?php echo $product->name; ?>" name="name" id="name">
@@ -23,14 +23,21 @@
                 </div>
                 <div class="form-group">
                     <label for="images">Bilder</label>
-                    <input type="file" name="images" id="images">
+                    <input type="file" name="images[]" id="images" multiple>
                 </div>
                 <div class="form-group">
                     <?php foreach ($product->images as $image): ?>
                         <div class="thumbnail">
-                            <img src="<?php echo $image; ?>" width="150">
+                            <img src="<?php echo $base . 'Assets/' . $image; ?>" width="150">
                             <label>
-                                <input type="checkbox" name="delete[<?= $image; ?>]"> Löschen?
+                                <?php
+                                /**
+                                 * Formularfeld-Namen im Format name[index] erzeigen im $_POST['name'] einen Array, also:
+                                 *
+                                 * $_POST['name'][index] = <formular-value>
+                                 */
+                                ?>
+                                <input type="checkbox" name="delete[<?php echo $image; ?>]"> Löschen?
                             </label>
                         </div>
                     <?php endforeach; ?>

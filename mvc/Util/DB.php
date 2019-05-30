@@ -38,8 +38,12 @@ class DB
             $type = $values[0]; // i, bzw. s
             $name = $values[1]; // id, bzw. name
 
+            // var_dump($type, $name, $value);
+            unset($v);
+            $v = $value;
+
             $types .= $type;
-            $param_values[] = &$value; // mysqli_stmt::bind_param erwartet referenzen auf die Werte und nicht die werte selbst: https://www.php.net/manual/de/mysqli-stmt.bind-param.php
+            $param_values[] = &$v; // mysqli_stmt::bind_param erwartet referenzen auf die Werte und nicht die werte selbst: https://www.php.net/manual/de/mysqli-stmt.bind-param.php
 
         } // types: 'is', values: [2, 'Thomas']
 
@@ -54,6 +58,10 @@ class DB
 
 // get result
         $result = $this->stmt->get_result();
+
+        if (is_bool($result)) {
+            return $result;
+        }
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }

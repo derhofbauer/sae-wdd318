@@ -41,9 +41,36 @@ class ProductController {
     }
 
     public function updateProduct ($id) {
-        var_dump($_POST);
-        // daten validieren
-        // product speichern
-        // redirect auf editForm
+        $id = (int)$id;
+
+        $product = Product::find($id);
+
+        $product->name = trim($_POST['name']);
+        $product->price = (float)$_POST['price'];
+        $product->stock = (int)$_POST['stock'];
+        $product->description = trim($_POST['description']);
+
+        if (isset($_POST['delete'])) {
+            foreach ($_POST['delete'] as $path => $on) {
+                $product->removeImageByPath($path);
+            }
+        }
+
+        $uploadDir = __DIR__ . '/../Assets/product_images/';
+
+        foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
+            $mimeType = $_FILES['images']['type'][$key];
+            $uploadName = $uploadDir . basename($_FILES['images']['name'][$key]); // path & dateiname
+
+            if (substr($mimeType, 0, 5) === 'image') {
+                move_uploaded_file($tmp_name, $uploadName);
+                $product->addImage($uploadName);
+            }
+        }
+
+        $product->save();
+
+        header("Location: " . APP_BASE . "admin/products/edit/$id");
+        exit;
     }
 }

@@ -17,10 +17,6 @@ class Product
         $this->price = $dbResult['price'];
         $this->stock = $dbResult['stock'];
         $this->images = explode(',', $dbResult['images']);
-
-        $this->images = array_map(function ($value) {
-            return "http://localhost:8080/mvc/Assets/${value}";
-        }, $this->images);
     }
 
     public static function fillMultiple (array $dbResult)
@@ -75,6 +71,48 @@ class Product
         $result = $db->query("SELECT * FROM products WHERE id IN ({$ids})", []);  // <-- quick und dirty!
 
         return self::fillMultiple($result);
+    }
+
+    public function save ()
+    {
+        $db = new DB();
+
+        $images = implode(',', $this->images);
+
+        $db->query("UPDATE products SET name=?, price=?, stock=?, description=?, images=? WHERE id = ?", [
+            's:name' => $this->name,
+            'd:price' => $this->price,
+            'i:stock' => $this->stock,
+            's:description' => $this->description,
+            's:images' => $images,
+            'i:id' => $this->id
+        ]);
+    }
+
+    public function removeImageByPath ($path, $deleteFile = true)
+    {
+        $_images = [];
+
+        foreach ($this->images as $image) {
+            if ($image != $path) {
+                $_images[] = $image;
+            } else {
+                if ($deleteFile === true) {
+                    $file = __DIR__ . "/../Assets/$image";
+                    unlink($file);
+                }
+            }
+        }
+
+        $this->images = $_images;
+    }
+
+    public function addImage ($path)
+    {
+        $needle = 'Assets/';
+        $indexOfAssets = strpos($path, $needle);
+        $pathWithoutAssets = substr($path, $indexOfAssets + strlen($needle));
+        $this->images[] = $pathWithoutAssets;
     }
 }
 
