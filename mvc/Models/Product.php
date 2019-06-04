@@ -8,6 +8,7 @@ class Product
     public $stock;
     public $description;
     public $images;
+    public $deleted;
 
     public function fill ($dbResult)
     {
@@ -16,6 +17,7 @@ class Product
         $this->description = $dbResult['description'];
         $this->price = $dbResult['price'];
         $this->stock = $dbResult['stock'];
+        $this->deleted = $dbResult['deleted'];
         $this->images = explode(',', $dbResult['images']);
     }
 
@@ -37,7 +39,7 @@ class Product
     {
         $db = new DB();
 
-        $result = $db->query('SELECT * FROM products');
+        $result = $db->query('SELECT * FROM products WHERE deleted != TRUE');
         return self::fillMultiple($result);
     }
 
