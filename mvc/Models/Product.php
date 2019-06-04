@@ -7,8 +7,8 @@ class Product
     public $price;
     public $stock;
     public $description;
-    public $images;
-    public $deleted;
+    public $images = [];
+    public $deleted = 0;
 
     public function fill ($dbResult)
     {
