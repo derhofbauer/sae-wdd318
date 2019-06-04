@@ -93,7 +93,7 @@ class ProductController {
 
             $new_product->save();
 
-            header("Location: " . APP_BASE . "/admin/products");
+            header("Location: " . APP_BASE . "admin/products");
             exit;
         } else {
             View::load('admin/products.add', []);
