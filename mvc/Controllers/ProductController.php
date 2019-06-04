@@ -15,7 +15,8 @@ class ProductController {
     }
 
     public function list () {
-        die('product list');
+        $controller = new HomeController();
+        $controller->index();
     }
 
     public function adminList () {
@@ -98,5 +99,16 @@ class ProductController {
         } else {
             View::load('admin/products.add', []);
         }
+    }
+
+    public function delete ($id) {
+        $id = (int)$id;
+
+        $product = Product::find($id);
+        $product->deleted = true;
+        $product->save();
+
+        header("Location: " . APP_BASE . "admin/products");
+        exit;
     }
 }

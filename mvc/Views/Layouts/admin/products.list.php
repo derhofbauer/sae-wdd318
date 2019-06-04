@@ -12,6 +12,8 @@
                     <a href="admin/products/edit/<?php echo $product->id; ?>">
                         <?php echo $product->name; ?>
                     </a>
+                    <span> - </span>
+                    <a href="admin/products/delete/<?php echo $product->id; ?>">Delete</a>
                 </li>
                 <?php endforeach; ?>
             </ul>

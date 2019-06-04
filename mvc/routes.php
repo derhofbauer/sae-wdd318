@@ -14,15 +14,21 @@ $routes = [
     "/products" => "ProductController.list",
     "/products/list" => "ProductController.list",
     "/products/show/:id" => "ProductController.show",
+
     "/cart" => "CartController.list",
     "/cart/add/:id" => "CartController.addProduct",
+    "/cart/remove/:id" => "CartController.removeProduct",
+
     "/login" => "LoginController.loginForm",
     "/logout" => "LoginController.logout",
+
     "/admin" => "AdminController.index",
+
     "/admin/products" => "ProductController.adminList",
     "/admin/products/edit/:id" => "ProductController.editForm",
     "/admin/products/update/:id" => "ProductController.updateProduct",
-    "/admin/products/add" => "ProductController.addForm"
+    "/admin/products/add" => "ProductController.addForm",
+    "/admin/products/delete/:id" => "ProductController.delete"
     // ...
 ];
 

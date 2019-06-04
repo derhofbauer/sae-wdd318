@@ -82,16 +82,17 @@ class Product
         $images = implode(',', $this->images);
 
         if (isset($this->id) && !empty($this->id)) {
-            $db->query("UPDATE products SET name=?, price=?, stock=?, description=?, images=? WHERE id = ?", [
+            $db->query("UPDATE products SET name=?, price=?, stock=?, description=?, images=?, deleted=? WHERE id = ?", [
                 's:name' => $this->name,
                 'd:price' => $this->price,
                 'i:stock' => $this->stock,
                 's:description' => $this->description,
                 's:images' => $images,
+                'i:deleted' => $this->deleted,
                 'i:id' => $this->id
             ]);
         } else {
-            $db->query("INSERT INTO products SET name=?, price=?, stock=?, description=?, images=?", [
+            $db->query("INSERT INTO products SET name=?, price=?, stock=?, description=?, images=?, deleted=0", [
                 's:name' => $this->name,
                 'd:price' => $this->price,
                 'i:stock' => $this->stock,
