@@ -4,7 +4,7 @@
         <h1>Add Product</h1>
         <div class="row">
 
-            <form action="admin/products/add/" method="post" enctype="multipart/form-data">
+            <form action="admin/products/add" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name">

@@ -79,14 +79,24 @@ class Product
 
         $images = implode(',', $this->images);
 
-        $db->query("UPDATE products SET name=?, price=?, stock=?, description=?, images=? WHERE id = ?", [
-            's:name' => $this->name,
-            'd:price' => $this->price,
-            'i:stock' => $this->stock,
-            's:description' => $this->description,
-            's:images' => $images,
-            'i:id' => $this->id
-        ]);
+        if (isset($this->id) && !empty($this->id)) {
+            $db->query("UPDATE products SET name=?, price=?, stock=?, description=?, images=? WHERE id = ?", [
+                's:name' => $this->name,
+                'd:price' => $this->price,
+                'i:stock' => $this->stock,
+                's:description' => $this->description,
+                's:images' => $images,
+                'i:id' => $this->id
+            ]);
+        } else {
+            $db->query("INSERT INTO products SET name=?, price=?, stock=?, description=?, images=?", [
+                's:name' => $this->name,
+                'd:price' => $this->price,
+                'i:stock' => $this->stock,
+                's:description' => $this->description,
+                's:images' => $images
+            ]);
+        }
     }
 
     public function removeImageByPath ($path, $deleteFile = true)

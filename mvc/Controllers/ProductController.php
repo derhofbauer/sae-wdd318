@@ -56,6 +56,15 @@ class ProductController {
             }
         }
 
+        $product = $this->handleFileUpload($product);
+
+        $product->save();
+
+        header("Location: " . APP_BASE . "admin/products/edit/$id");
+        exit;
+    }
+
+    private function handleFileUpload (Product $product) {
         $uploadDir = __DIR__ . '/../Assets/product_images/';
 
         foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
@@ -68,13 +77,26 @@ class ProductController {
             }
         }
 
-        $product->save();
-
-        header("Location: " . APP_BASE . "admin/products/edit/$id");
-        exit;
+        return $product;
     }
 
     public function addForm () {
-        View::load('admin/products.add', []);
+        if (isset($_POST['name'])) {
+            $new_product = new Product();
+
+            $new_product->name = $_POST['name'];
+            $new_product->price = $_POST['price'];
+            $new_product->stock = $_POST['stock'];
+            $new_product->description = $_POST['description'];
+
+            $new_product = $this->handleFileUpload($new_product);
+
+            $new_product->save();
+
+            header("Location: " . APP_BASE . "/admin/products");
+            exit;
+        } else {
+            View::load('admin/products.add', []);
+        }
     }
 }
