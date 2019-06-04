@@ -73,4 +73,8 @@ class ProductController {
         header("Location: " . APP_BASE . "admin/products/edit/$id");
         exit;
     }
+
+    public function addForm () {
+        View::load('admin/products.add', []);
+    }
 }

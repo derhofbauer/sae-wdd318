@@ -1,6 +1,7 @@
 <?php require_once __DIR__ . '/../../Partials/Admin/Header.php'; ?>
 
     <div class="container">
+        <a href="admin/products/add">Add New Product</a>
         <div class="row">
             <ul>
                 <?php foreach ($products as $product): ?>

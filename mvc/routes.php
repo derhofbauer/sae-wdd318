@@ -21,7 +21,8 @@ $routes = [
     "/admin" => "AdminController.index",
     "/admin/products" => "ProductController.adminList",
     "/admin/products/edit/:id" => "ProductController.editForm",
-    "/admin/products/update/:id" => "ProductController.updateProduct"
+    "/admin/products/update/:id" => "ProductController.updateProduct",
+    "/admin/products/add" => "ProductController.addForm"
     // ...
 ];
 
