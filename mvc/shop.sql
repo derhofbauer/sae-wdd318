@@ -3,20 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Erstellungszeit: 04. Jun 2019 um 14:08
+-- Erstellungszeit: 06. Jun 2019 um 12:14
 -- Server-Version: 10.1.18-MariaDB-1~jessie
 -- PHP-Version: 7.2.14
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET sql_mode = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Datenbank: `shop`
@@ -28,18 +22,32 @@ SET time_zone = "+00:00";
 -- Tabellenstruktur für Tabelle `admin_users`
 --
 
-CREATE TABLE `admin_users` (
-  `id` int(11) NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE ` admin_users `
+(
+    `id` INT
+(
+    11
+) NOT NULL,
+    ` email ` VARCHAR
+(
+    255
+) COLLATE utf8_unicode_ci NOT NULL,
+    ` PASSWORD ` VARCHAR
+(
+    255
+) COLLATE utf8_unicode_ci NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `admin_users`
 --
 
-INSERT INTO `admin_users` (`id`, `email`, `password`) VALUES
-(1, 'hofbauer.alexander@gmail.com', '$2y$12$SRYKwKGhpWAPgay3dR3cce16NfWT.MliY8v8pjFdUkfPByhtN7vKy');
+INSERT INTO ` admin_users ` (` id `, ` email `, ` PASSWORD `)
+    VALUES
+        (1, ''hofbauer.alexander@gmail.com
+            '',
+            ''$2y$
+            12$SRYKwKGhpWAPgay3dR3cce16NfWT.MliY8v8pjFdUkfPByhtN7vKy'');
 
 -- --------------------------------------------------------
 
@@ -58,6 +66,13 @@ CREATE TABLE `adress` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `adress`
+--
+
+INSERT INTO `adress` (`id`, `street`, `streetNr`, `door`, `zip`, `city`, `country`, `name`, `user_id`) VALUES
+(1, ''Hohenstauffengasse'', ''8'', ''ganzes fucking Haus'', ''1010'', ''Wien'', ''Oesterreich'', ''SAE Institute Vienna'', 2);
 
 -- --------------------------------------------------------
 
@@ -84,9 +99,9 @@ CREATE TABLE `orders` (
   `delivery_address_id` int(11) NOT NULL,
   `invoice_address_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `crdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `crdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `products` text COLLATE utf8_unicode_ci NOT NULL,
-  `status` enum('open','in progress','in delivery','storno','delivered') COLLATE utf8_unicode_ci NOT NULL
+  `status` enum(''open'',''in progress'',''in delivery'',''storno'',''delivered'') COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -102,7 +117,7 @@ CREATE TABLE `products` (
   `stock` int(11) NOT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `images` text COLLATE utf8_unicode_ci,
-  `deleted` tinyint(1) NOT NULL COMMENT 'soft delete, null = Product visible, true = Product deleted'
+  `deleted` tinyint(1) NOT NULL COMMENT ''soft delete, null = Product visible, true = Product deleted''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -110,11 +125,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `stock`, `description`, `images`, `deleted`) VALUES
-(1, 'fancy product', 0, 0, '', 'product_images/clem-onojeghuo-99382-unsplash.jpg,product_images/pimp-rollator.jpg', 0),
-(2, 'another fancy product', 42, 0, 'Super cooles richtig leiwandes Produkt', 'product_images/clem-onojeghuo-99382-unsplash.jpg', 0),
-(3, 'yet another one', 10.99, 10, 'Super cooles richtig leiwandes Produkt', 'product_images/clem-onojeghuo-99382-unsplash.jpg', 0),
-(5, 'new product', 2765210, 2147483647, 'sadasd', 'product_images/pimp-rollator.jpg', 1),
-(6, 'new product', 2765210, 2147483647, 'sadasd', 'product_images/pimp-rollator.jpg', 0);
+(1, ''fancy product'', 666, 0, '''', ''product_images/clem-onojeghuo-99382-unsplash.jpg,product_images/pimp-rollator.jpg'', 0),
+(2, ''another fancy product'', 42, 0, ''Super cooles richtig leiwandes Produkt'', ''product_images/clem-onojeghuo-99382-unsplash.jpg'', 0),
+(3, ''yet another one'', 10.99, 10, ''Super cooles richtig leiwandes Produkt'', ''product_images/clem-onojeghuo-99382-unsplash.jpg'', 0),
+(5, ''new product'', 2765210, 2147483647, ''sadasd'', ''product_images/pimp-rollator.jpg'', 1),
+(6, ''new product'', 2765210, 2147483647, ''sadasd'', ''product_images/pimp-rollator.jpg'', 0),
+(7, ''asdasd'', 123123, 123123, ''sdfadf'', NULL, 0),
+(8, ''asdasd'', 123123, 123123, ''sdfadf'', '''', 1),
+(9, ''asdasd'', 123123, 123123, ''sdfadf'', ''product_images/13620323_10206528057507351_2500094214873073550_n.jpg'', 1);
 
 -- --------------------------------------------------------
 
@@ -136,8 +154,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `birthday`, `phone`) VALUES
-(2, 'Arthur Dent', 'arthur.dent@galaxy.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL),
-(3, 'Robin Glaeser', 'robin@glaeser.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL);
+(2, ''Arthur Dent'', ''arthur.dent@galaxy.com'', ''$2y$ 12 $7 grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS
+            '', NULL, NULL),
+        (3,
+            ''Robin Glaeser
+            '',
+            ''robin@glaeser.com
+            '',
+            ''$2y$ 12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS'', NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -194,7 +218,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT für Tabelle `adress`
 --
 ALTER TABLE `adress`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `carts`
@@ -212,7 +236,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`
@@ -220,7 +244,3 @@ ALTER TABLE `products`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
