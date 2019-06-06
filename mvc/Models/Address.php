@@ -39,6 +39,20 @@ class Address
         return $addresses;
     }
 
+    public static function find (int $id)
+    {
+        $db = new DB();
+
+        $result = $db->query('SELECT * FROM address WHERE id = ?', [
+            'i:id' => $id
+        ]);
+
+        $a = new Address();
+        $a->fill($result[0]);
+
+        return $a;
+    }
+
     public function save ()
     {
         $db = new DB();
@@ -56,7 +70,7 @@ class Address
                 'i:id' => $this->id
             ]);
         } else {
-            $db->query("INSERT INTO adress SET street=?, streetnr=?, door=?, zip=?, city=?, country=?, NAME=?, user_id=?", [
+            $db->query("INSERT INTO adress SET street=?, streetnr=?, door=?, zip=?, city=?, country=?, name=?, user_id=?", [
                 's:street' => $this->street,
                 's:streetNr' => $this->streetNr,
                 's:door' => $this->door,
@@ -66,6 +80,8 @@ class Address
                 's:name' => $this->name,
                 's:user_id' => $this->user_id
             ]);
+            $result = $db->query("SELECT * FROM adress ORDER BY id DESC LIMIT 1");
+            $this->fill($result[0]);
         }
     }
 
