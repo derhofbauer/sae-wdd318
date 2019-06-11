@@ -43,7 +43,7 @@ class Address
     {
         $db = new DB();
 
-        $result = $db->query('SELECT * FROM address WHERE id = ?', [
+        $result = $db->query('SELECT * FROM adress WHERE id = ?', [
             'i:id' => $id
         ]);
 

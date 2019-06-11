@@ -18,15 +18,15 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group">
                     <label for="street">Straße</label>
-                    <input type="text" class="form-control" id="street" name="street" required>
+                    <input type="text" class="form-control" id="street" name="street">
                 </div>
                 <div class="form-group">
                     <label for="streetNr">Hausnummer</label>
-                    <input type="text" class="form-control" id="streetNr" name="streetNr" required>
+                    <input type="text" class="form-control" id="streetNr" name="streetNr">
                 </div>
                 <div class="form-group">
                     <label for="door">Türnummer</label>
@@ -34,15 +34,15 @@
                 </div>
                 <div class="form-group">
                     <label for="zip">ZIP</label>
-                    <input type="text" class="form-control" id="zip" name="zip" required>
+                    <input type="text" class="form-control" id="zip" name="zip">
                 </div>
                 <div class="form-group">
                     <label for="city">Stadt</label>
-                    <input type="text" class="form-control" id="city" name="city" required>
+                    <input type="text" class="form-control" id="city" name="city">
                 </div>
                 <div class="form-group">
                     <label for="country">Land</label>
-                    <select class="form-control" id="country" name="country" required>
+                    <select class="form-control" id="country" name="country">
                         <?php foreach (Countries::$countries as $abbr => $country): ?>
                             <option value="<?php echo $abbr; ?>"><?php echo $country; ?></option>
                         <?php endforeach; ?>

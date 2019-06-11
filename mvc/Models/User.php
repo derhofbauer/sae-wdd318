@@ -32,9 +32,16 @@ class User
         return $user;
     }
 
-    public function checkPassword (string $password) {
+    public function checkPassword (string $password)
+    {
         $password = trim($password);
         return password_verify($password, $this->password_hash);
+    }
+
+    public function setPassword (string $password)
+    {
+        $password = trim($password);
+        $this->password_hash = password_hash($password, PASSWORD_BCRYPT);
     }
 
     /**
@@ -48,7 +55,7 @@ class User
     {
         $db = new DB();
 
-        $result = $db->query('SELECT name FROM users WHERE id = ?', [
+        $result = $db->query('SELECT * FROM users WHERE id = ?', [
             'i:id' => $id
         ]);
 
@@ -56,6 +63,29 @@ class User
         $user->fill($result[0]);
 
         return $user;
+    }
+
+    public function save ()
+    {
+        $db = new DB();
+
+        if (isset($this->id) && !empty($this->id)) {
+            $db->query("UPDATE users SET name=?, email=?, password=? WHERE id = ?", [
+                's:name' => $this->name,
+                's:email' => $this->email,
+                's:password_hash' => $this->password_hash,
+                'i:id' => $this->id
+            ]);
+        } else {
+            $db->query("INSERT INTO users SET name=?, email=?, password=?", [
+                's:name' => $this->name,
+                's:email' => $this->email,
+                's:password_hash' => $this->password_hash
+            ]);
+            $result = $db->query("SELECT * FROM users ORDER BY id DESC LIMIT 1");
+            $this->fill($result[0]);
+        }
+        return $this;
     }
 }
 

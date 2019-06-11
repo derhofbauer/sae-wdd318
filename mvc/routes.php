@@ -21,6 +21,7 @@ $routes = [
 
     "/login" => "LoginController.loginForm",
     "/logout" => "LoginController.logout",
+    "/signup" => "LoginController.signupForm",
 
     "/admin" => "AdminController.index",
 
@@ -30,7 +31,10 @@ $routes = [
     "/admin/products/add" => "ProductController.addForm",
     "/admin/products/delete/:id" => "ProductController.delete",
 
-    "/checkout/address" => "CheckoutController.addAddress"
+    "/checkout/address" => "CheckoutController.addAddress",
+    "/checkout/payment/:id" => "CheckoutController.addPayment",
+    "/checkout/summary/:id" => "CheckoutController.summary",
+    "/checkout/place/:id" => "CheckoutController.finish"
     // ...
 ];
 

@@ -31,6 +31,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="login">Login</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup">Registrieren</a>
+                </li>
             <?php endif; ?>
             <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
                 <li class="nav-item">

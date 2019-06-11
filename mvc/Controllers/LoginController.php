@@ -66,7 +66,7 @@ class LoginController
 
         $name = '';
 
-        if ($_SESSION['admin'] === true) {
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
             $user = Admin::find($user_id);
             $name = $user->email;
         } else {
@@ -77,5 +77,44 @@ class LoginController
 
         // Name zurückgeben
         return $name;
+    }
+
+    public function signupForm ()
+    {
+        if (isset($_POST['email'])) {
+            // Formular wurde abgeschickt, sonst würden wir keine Daten kriegen
+            $name = trim($_POST['name']);
+            $email = trim($_POST['email']);
+            $password = trim($_POST['password']);
+            $password_repeat = trim($_POST['password_repeat']);
+
+            if ($password !== $password_repeat) {
+                $params = [
+                    'error' => 'Du Depp! Gib das richtige Passwort an!'
+                ];
+                View::load('signup', $params); return;
+            }
+            // alle anderen Validierungen!! bspw. Email
+
+            $user = new User();
+            $user->name = $name;
+            $user->email = $email;
+            $user->setPassword($password);
+            $user->save();
+
+
+            // s. https://www.php.net/manual/en/function.mail.php
+            $to      = $user->email;
+            $subject = 'Herzlich Wilkommen in unserem coolen Shop';
+            $message = 'Herzlich Wilkommen in unserem coolen Shop';
+            $headers = 'From: noreply@saeshop.com' . "\r\n" .
+                'Reply-To: office@saeshop.com' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+            mail($to, $subject, $message, $headers);
+
+            header('Location:' . APP_BASE); exit;
+        }
+
+        View::load('signup');
     }
 }
