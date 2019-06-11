@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Erstellungszeit: 11. Jun 2019 um 11:20
+-- Erstellungszeit: 11. Jun 2019 um 15:08
 -- Server-Version: 10.1.18-MariaDB-1~jessie
 -- PHP-Version: 7.2.14
 
@@ -64,7 +64,7 @@ CREATE TABLE `adress` (
 --
 
 INSERT INTO `adress` (`id`, `street`, `streetNr`, `door`, `zip`, `city`, `country`, `name`, `user_id`) VALUES
-(1, 'Hohenstauffengasse', '8', 'ganzes fucking Haus', '1010', 'Wien', 'Oesterreich', 'SAE Institute Vienna', 2),
+(1, 'Hohenstauffengasse', '8', 'ganzes fucking Haus', '1010', 'Wien', 'Oesterreich', 'SAE Institute Vienna', 1),
 (3, 'alshdlkjah', 'alkdsjh', 'alkjdh', 'laskjdh', 'aslkdjh', 'Afghanistan', 'asdlkh', 2),
 (4, 'alshdlkjah', 'alkdsjh', 'alkjdh', 'laskjdh', 'aslkdjh', 'Afghanistan', 'asdlkh', 2),
 (5, 'alshdlkjah', 'alkdsjh', 'alkjdh', 'laskjdh', 'aslkdjh', 'Afghanistan', 'asdlkh', 2),
@@ -107,7 +107,7 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `total_price` double DEFAULT NULL,
   `delivery_address_id` int(11) NOT NULL,
-  `invoice_address_id` int(11) DEFAULT NULL,
+  `payment_id` int(11) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   `crdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `products` text COLLATE utf8_unicode_ci NOT NULL,
@@ -118,8 +118,34 @@ CREATE TABLE `orders` (
 -- Daten für Tabelle `orders`
 --
 
-INSERT INTO `orders` (`id`, `total_price`, `delivery_address_id`, `invoice_address_id`, `user_id`, `crdate`, `products`, `status`) VALUES
-(1, NULL, 20, NULL, 2, '2019-06-06 12:39:07', '{\"2\":1}', 'open');
+INSERT INTO `orders` (`id`, `total_price`, `delivery_address_id`, `payment_id`, `user_id`, `crdate`, `products`, `status`) VALUES
+(1, NULL, 20, NULL, 2, '2019-06-06 12:39:07', '{\"2\":1}', 'open'),
+(2, NULL, 1, NULL, 2, '2019-06-11 13:47:18', '{\"2\":1}', 'open'),
+(3, NULL, 1, NULL, 2, '2019-06-11 13:48:16', '{\"2\":1}', 'open'),
+(4, NULL, 1, NULL, 2, '2019-06-11 13:49:48', '{\"2\":1}', 'open'),
+(5, NULL, 1, 1, 1, '2019-06-11 14:07:58', '{\"1\":1}', 'in progress');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `payments`
+--
+
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `number` int(11) NOT NULL,
+  `expires` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ccv` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `payments`
+--
+
+INSERT INTO `payments` (`id`, `name`, `number`, `expires`, `ccv`, `user_id`) VALUES
+(1, 'Alexander Hofbauer', 1239128376, '12/2020', 993, 1);
 
 -- --------------------------------------------------------
 
@@ -171,7 +197,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `birthday`, `phone`) VALUES
-(2, 'Arthur Dent', 'arthur.dent@galaxy.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL)
+(1, 'Arthur Dent', 'arthur.dent@galaxy.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL),
+(3, 'Robin Glaeser', 'robin@glaeser.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL),
+(4, 'Robin', 'robin@email.com', '$2y$10$gV8noWqdBzBMZiQZOVIxy.qFdOeiMohXudVccbLapEmcMv4mVTIhC', NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -199,6 +227,12 @@ ALTER TABLE `carts`
 -- Indizes für die Tabelle `orders`
 --
 ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `payments`
+--
+ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -240,6 +274,12 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT für Tabelle `payments`
+--
+ALTER TABLE `payments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -252,7 +292,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
