@@ -6,6 +6,7 @@ class User
     public $name;
     public $email;
     private $password_hash;
+    public $deleted = false;
 
     public function fill ($dbResult)
     {
@@ -13,6 +14,29 @@ class User
         $this->name = (isset($dbResult['name']) ? $dbResult['name'] : null);
         $this->email = $dbResult['email'];
         $this->password_hash = $dbResult['password'];
+        $this->deleted = (bool)$dbResult['deleted'];
+    }
+
+    public static function fillMultiple (array $dbResult)
+    {
+        $users = [];
+
+        foreach ($dbResult as $user) {
+            $u = new User();
+            $u->fill($user);
+
+            $users[] = $u;
+        }
+
+        return $users;
+    }
+
+    public static function all ()
+    {
+        $db = new DB();
+
+        $result = $db->query('SELECT * FROM users WHERE deleted != TRUE');
+        return self::fillMultiple($result);
     }
 
     public static function findByEmail (string $email)
@@ -70,10 +94,11 @@ class User
         $db = new DB();
 
         if (isset($this->id) && !empty($this->id)) {
-            $db->query("UPDATE users SET name=?, email=?, password=? WHERE id = ?", [
+            $db->query("UPDATE users SET name=?, email=?, password=?, deleted=? WHERE id = ?", [
                 's:name' => $this->name,
                 's:email' => $this->email,
                 's:password_hash' => $this->password_hash,
+                'i:deleted' => (int)$this->deleted,
                 'i:id' => $this->id
             ]);
         } else {

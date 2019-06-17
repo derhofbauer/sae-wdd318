@@ -31,6 +31,11 @@ $routes = [
     "/admin/products/add" => "ProductController.addForm",
     "/admin/products/delete/:id" => "ProductController.delete",
 
+    "/admin/users" => "UserController.adminList",
+    "/admin/users/edit/:id" => "UserController.editForm",
+    "/admin/users/update/:id" => "UserController.updateUser",
+    "/admin/users/delete/:id" => "UserController.delete",
+
     "/checkout/address" => "CheckoutController.addAddress",
     "/checkout/payment/:id" => "CheckoutController.addPayment",
     "/checkout/summary/:id" => "CheckoutController.summary",

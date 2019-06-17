@@ -24,6 +24,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="admin/products">Products</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="admin/users">User</a>
+            </li>
         </ul>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
             <div class="logged_in">
