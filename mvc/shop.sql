@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Erstellungszeit: 11. Jun 2019 um 15:08
+-- Erstellungszeit: 17. Jun 2019 um 12:31
 -- Server-Version: 10.1.18-MariaDB-1~jessie
 -- PHP-Version: 7.2.14
 
@@ -31,15 +31,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin_users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `admin_users`
 --
 
-INSERT INTO `admin_users` (`id`, `email`, `password`) VALUES
-(1, 'arthur.dent@galaxy.com', '$2y$12$SRYKwKGhpWAPgay3dR3cce16NfWT.MliY8v8pjFdUkfPByhtN7vKy');
+INSERT INTO `admin_users` (`id`, `email`, `password`, `deleted`) VALUES
+(1, 'arthur.dent@galaxy.com', '$2y$12$SRYKwKGhpWAPgay3dR3cce16NfWT.MliY8v8pjFdUkfPByhtN7vKy', 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `stock`, `description`, `images`, `deleted`) VALUES
-(1, 'fancy product', 666, 0, '', 'product_images/clem-onojeghuo-99382-unsplash.jpg,product_images/pimp-rollator.jpg', 0),
+(1, 'Arthur Dent 2', 0, 0, '', 'product_images/clem-onojeghuo-99382-unsplash.jpg,product_images/pimp-rollator.jpg', 0),
 (2, 'another fancy product', 42, 0, 'Super cooles richtig leiwandes Produkt', 'product_images/clem-onojeghuo-99382-unsplash.jpg', 0),
 (3, 'yet another one', 10.99, 10, 'Super cooles richtig leiwandes Produkt', 'product_images/clem-onojeghuo-99382-unsplash.jpg', 0),
 (5, 'new product', 2765210, 2147483647, 'sadasd', 'product_images/pimp-rollator.jpg', 1),
@@ -189,17 +190,16 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `birthday` date DEFAULT NULL,
-  `phone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL
+  `phone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `birthday`, `phone`) VALUES
-(1, 'Arthur Dent', 'arthur.dent@galaxy.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL),
-(3, 'Robin Glaeser', 'robin@glaeser.com', '$2y$12$7grxEaO1TfJSGv5YwCn78.FUYIox7BPNNi5zB.nJ9XLPYWIiM.LTS', NULL, NULL),
-(4, 'Robin', 'robin@email.com', '$2y$10$gV8noWqdBzBMZiQZOVIxy.qFdOeiMohXudVccbLapEmcMv4mVTIhC', NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `birthday`, `phone`, `deleted`) VALUES
+(1, 'Arthur Dent', 'arthur.dent@galaxy.com', '$2y$10$qNTf/DXxr21bb1Sh.8ST7eGRkbgh8cKZhR2AcYPKR6vPcEWtco9Oq', NULL, NULL, 0);
 
 --
 -- Indizes der exportierten Tabellen
@@ -292,7 +292,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
