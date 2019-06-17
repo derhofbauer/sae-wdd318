@@ -69,6 +69,26 @@ class CartController
 
         return $cartCount;
     }
+
+    public function incrementProduct ($id) {
+        $id = (int)$id;
+
+        $cart = new SessionCart();
+        $cart->addProduct($id, 1);
+
+        header("Location: " . APP_BASE . "cart");
+        exit;
+    }
+
+    public function decrementProduct ($id) {
+        $id = (int)$id;
+
+        $cart = new SessionCart();
+        $cart->removeProduct($id, 1);
+
+        header("Location: " . APP_BASE . "cart");
+        exit;
+    }
 }
 
 

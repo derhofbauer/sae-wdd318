@@ -14,6 +14,8 @@
                                                               Subtotal: <?php echo $_SESSION['cart'][$product->id] * $product->price; ?>
                 <span> - </span>
                 <a href="cart/remove/<?php echo $product->id; ?>">Remove from Cart</a>
+                <a href="cart/increment/<?php echo $product->id; ?>">Add 1 +</a>
+                <a href="cart/decrement/<?php echo $product->id; ?>">Remove 1 -</a>
             </div>
         <?php endforeach; ?>
 

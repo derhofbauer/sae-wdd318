@@ -18,6 +18,8 @@ $routes = [
     "/cart" => "CartController.list",
     "/cart/add/:id" => "CartController.addProduct",
     "/cart/remove/:id" => "CartController.removeProduct",
+    "/cart/increment/:id" => "CartController.incrementProduct",
+    "/cart/decrement/:id" => "CartController.decrementProduct",
 
     "/login" => "LoginController.loginForm",
     "/logout" => "LoginController.logout",
