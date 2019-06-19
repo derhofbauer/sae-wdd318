@@ -22,6 +22,9 @@ class Cart
             unset($this->products[$product_id]);
         } else {
             $this->products[$product_id] = $this->products[$product_id] - (int)$quantity;
+            if ($this->products[$product_id] <= 0) {
+                unset($this->products[$product_id]);
+            }
         }
     }
 
