@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 class LoginController
 {
     public function loginForm ()
@@ -7,8 +9,8 @@ class LoginController
         if (isset($_POST['email'])) {
             // Formular wurde abgeschickt, sonst würden wir keine Daten kriegen
 
-            $user = User::findByEmail($_POST['email']);
-            $adminUser = Admin::findByEmail($_POST['email']);
+            $user = \App\Models\User::findByEmail($_POST['email']);
+            $adminUser = \App\Models\Admin::findByEmail($_POST['email']);
             if ($user === false && $adminUser === false) {
                 // User existiert nicht
                 die('User existiert nicht!');
@@ -22,7 +24,7 @@ class LoginController
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user_id'] = $user->id;
 
-                    if (is_a($user, Admin::class)) {
+                    if (is_a($user, \App\Models\Admin::class)) {
                         $_SESSION['admin'] = true;
                     }
 
@@ -45,7 +47,7 @@ class LoginController
             }
         }
 
-        View::load('login');
+        \App\Util\View::load('login');
     }
 
     public function logout ()
@@ -67,11 +69,11 @@ class LoginController
         $name = '';
 
         if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-            $user = Admin::find($user_id);
+            $user = \App\Models\Admin::find($user_id);
             $name = $user->email;
         } else {
             // Name aus Datenbank abfragen
-            $user = User::find($user_id);
+            $user = \App\Models\User::find($user_id);
             $name = $user->name;
         }
 
@@ -92,11 +94,11 @@ class LoginController
                 $params = [
                     'error' => 'Du Depp! Gib das richtige Passwort an!'
                 ];
-                View::load('signup', $params); return;
+                \App\Util\View::load('signup', $params); return;
             }
             // alle anderen Validierungen!! bspw. Email
 
-            $user = new User();
+            $user = new \App\Models\User();
             $user->name = $name;
             $user->email = $email;
             $user->setPassword($password);
@@ -115,6 +117,6 @@ class LoginController
             header('Location:' . APP_BASE); exit;
         }
 
-        View::load('signup');
+        \App\Util\View::load('signup');
     }
 }

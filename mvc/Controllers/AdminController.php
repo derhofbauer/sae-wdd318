@@ -1,11 +1,13 @@
 <?php
 
+namespace App\Controllers;
+
 class AdminController
 {
 
     public function index ()
     {
-        View::load('admin/index');
+        \App\Util\View::load('admin/index');
     }
 
 }

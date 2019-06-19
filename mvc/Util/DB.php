@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Util;
+
 /**
  * Class DB
  *
@@ -13,8 +15,8 @@ class DB
 
     public function __construct ($host = APP_DB_HOST, $user = APP_DB_USER, $pass = APP_DB_PASS, $dbname = APP_DB_NAME, $port = APP_DB_PORT)
     {
-// Datenbankverbindung aufbauen
-        $this->link = new mysqli($host, $user, $pass, $dbname, $port);
+        // Datenbankverbindung aufbauen
+        $this->link = new \mysqli($host, $user, $pass, $dbname, $port);
     }
 
     /**
@@ -22,14 +24,16 @@ class DB
      *
      * @param string $sql
      * @param array  $params ['i:id' => 2, 's:name' => "Thomas"]
+     *
+     * @return false|mixed|\mysqli_result
      */
     public function query ($sql, array $params = [])
     {
-// query abschicken
-// $this->stmt = $this->link->stmt_init();
+        // query abschicken
+        // $this->stmt = $this->link->stmt_init();
         $this->stmt = $this->link->prepare($sql);
 
-// prepare params
+        // prepare params
         $types = '';
         $param_values = [];
         foreach ($params as $key => $value) {
@@ -47,16 +51,16 @@ class DB
 
         } // types: 'is', values: [2, 'Thomas']
 
-// bind params
+        // bind params
         array_unshift($param_values, $types); // params: ['is', 2, 'Thomas']
         if (count($params) >= 1) {
             call_user_func_array([$this->stmt, 'bind_param'], $param_values); // $this->stmt->bind_param($params[0], $params[1], $params[2], .....);
         }
 
-// execute query
+        // execute query
         $this->stmt->execute();
 
-// get result
+        // get result
         $result = $this->stmt->get_result();
 
         if (is_bool($result)) {
@@ -68,7 +72,7 @@ class DB
 
     public function __destruct ()
     {
-// Datenbankverbindung schließen
+        // Datenbankverbindung schließen
         $this->link->close();
     }
 }

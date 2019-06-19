@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Order
 {
     public $id;
@@ -31,7 +33,7 @@ class Order
 
     public function save ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         if (isset($this->id) && !empty($this->id)) {
             $db->query("UPDATE orders SET total_price=?, delivery_address_id=?, payment_id=?, user_id=?, products=?, status=? WHERE id = ?", [
@@ -60,7 +62,7 @@ class Order
 
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM orders WHERE id = ?', [
             'i:id' => $id

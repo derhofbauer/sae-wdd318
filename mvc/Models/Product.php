@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Product
 {
     public $id;
@@ -37,7 +39,7 @@ class Product
 
     public static function all ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM products WHERE deleted != TRUE');
         return self::fillMultiple($result);
@@ -52,7 +54,7 @@ class Product
      */
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM products WHERE id = ?', [
             'i:id' => $id
@@ -66,7 +68,7 @@ class Product
 
     public static function getByIds (array $ids)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $ids = implode(',', $ids);
 
@@ -77,7 +79,7 @@ class Product
 
     public function save ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $images = implode(',', $this->images);
 

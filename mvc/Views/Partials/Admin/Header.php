@@ -30,7 +30,7 @@
         </ul>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
             <div class="logged_in">
-                Hallo, <?php echo LoginController::getEmailFromSession(); ?>
+                Hallo, <?php echo \App\Controllers\LoginController::getEmailFromSession(); ?>
                 (<a href="<?php echo $base; ?>logout">Logout</a>)
             </div>
         <?php endif; ?>

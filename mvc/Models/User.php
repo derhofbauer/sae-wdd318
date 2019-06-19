@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class User
 {
     public $id;
@@ -33,7 +35,7 @@ class User
 
     public static function all ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM users WHERE deleted != TRUE');
         return self::fillMultiple($result);
@@ -41,7 +43,7 @@ class User
 
     public static function findByEmail (string $email)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM users WHERE email = ?', [
             's:email' => trim($email)
@@ -77,7 +79,7 @@ class User
      */
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM users WHERE id = ?', [
             'i:id' => $id
@@ -91,7 +93,7 @@ class User
 
     public function save ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         if (isset($this->id) && !empty($this->id)) {
             $db->query("UPDATE users SET name=?, email=?, password=?, deleted=? WHERE id = ?", [

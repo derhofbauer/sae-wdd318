@@ -1,10 +1,12 @@
 <?php
 
+namespace App\Controllers;
+
 class CheckoutController
 {
     public function addAddress ()
     {
-        $cart = new SessionCart();
+        $cart = new \App\Models\SessionCart();
 
         $order = new Order();
         $order->user_id = $_SESSION['user_id'];
@@ -63,7 +65,7 @@ class CheckoutController
                 'addresses' => $addresses
             ];
 
-            View::load('checkout/addressForm', $params);
+            \App\Util\View::load('checkout/addressForm', $params);
         }
     }
 
@@ -103,7 +105,7 @@ class CheckoutController
                 'payments' => $payments
             ];
 
-            View::load('checkout/paymentForm', $params);
+            \App\Util\View::load('checkout/paymentForm', $params);
         }
     }
 
@@ -117,7 +119,7 @@ class CheckoutController
 
         $total_price = 0;
         foreach ($order->getProductsArray() as $product_id => $amount) {
-            $product = Product::find($product_id);
+            $product = \App\Models\Product::find($product_id);
             $product->amount = $amount;
             $products[] = $product;
 
@@ -133,7 +135,7 @@ class CheckoutController
             'total_price' => $total_price
         ];
 
-        View::load('checkout/summary', $params);
+        \App\Util\View::load('checkout/summary', $params);
     }
 
     public function finish ($order_id) {
@@ -143,12 +145,12 @@ class CheckoutController
         $order->status = 'in progress';
         $order->save();
 
-        $user = User::find($_SESSION['user_id']);
+        $user = \App\Models\User::find($_SESSION['user_id']);
 
         $params = [
           'user' => $user
         ];
 
-        View::load('checkout/thankyou', $params);
+        \App\Util\View::load('checkout/thankyou', $params);
     }
 }

@@ -25,7 +25,7 @@
                 <a class="nav-link" href="products">Products</a>
             </li>
             <li class="nav-item">
-                <a href="cart" class="nav-link">Cart (<?php echo CartController::cartCount(); ?>)</a>
+                <a href="cart" class="nav-link">Cart (<?php echo \App\Controllers\CartController::cartCount(); ?>)</a>
             </li>
             <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
                 <li class="nav-item">
@@ -43,7 +43,7 @@
         </ul>
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
             <div class="logged_in">
-                Hallo, <?php echo LoginController::getEmailFromSession(); ?>
+                Hallo, <?php echo \App\Controllers\LoginController::getEmailFromSession(); ?>
                 (<a href="<?php echo $base; ?>logout">Logout</a>)
             </div>
         <?php endif; ?>

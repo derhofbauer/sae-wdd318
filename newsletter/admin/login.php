@@ -19,7 +19,7 @@ if (isset($_POST) && isset($_POST['email']) && isset($_POST['password'])) {
     $result = $db->query('SELECT id,count(*) as count,is_admin,password FROM users WHERE email = ?', [
         's:email' => $email
     ]);
-    $user = new User($result[0]['id'], $email, $result[0]['password']);
+    $user = new \App\Models\User($result[0]['id'], $email, $result[0]['password']);
     if ($result[0]['is_admin'] === 1) {
         $user->setIsAdmin(true);
     }

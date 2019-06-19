@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 class UserController
 {
 
@@ -13,33 +15,33 @@ class UserController
 
     public function adminList ()
     {
-        $users = User::all();
+        $users = \App\Models\User::all();
 
         $params = [
             'users' => $users
         ];
 
-        View::load('admin/users.list', $params);
+        \App\Util\View::load('admin/users.list', $params);
     }
 
     public function editForm ($id)
     {
         $id = (int)$id;
 
-        $user = User::find($id);
+        $user = \App\Models\User::find($id);
 
         $params = [
             'user' => $user
         ];
 
-        View::load('admin/user.edit', $params);
+        \App\Util\View::load('admin/user.edit', $params);
     }
 
     public function updateUser ($id)
     {
         $id = (int)$id;
 
-        $user = User::find($id);
+        $user = \App\Models\User::find($id);
 
         $user->name = trim($_POST['name']);
         $user->email = trim($_POST['email']);
@@ -64,7 +66,7 @@ class UserController
     {
         $id = (int)$id;
 
-        $user = User::find($id);
+        $user = \App\Models\User::find($id);
         $user->deleted = true;
         $user->save();
 

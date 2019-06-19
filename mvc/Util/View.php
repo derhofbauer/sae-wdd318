@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Util;
+
 class View
 {
     /**

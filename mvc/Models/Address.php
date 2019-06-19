@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Address
 {
     public $id;
@@ -41,7 +43,7 @@ class Address
 
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM adress WHERE id = ?', [
             'i:id' => $id
@@ -55,7 +57,7 @@ class Address
 
     public function save ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         if (isset($this->id) && !empty($this->id)) {
             $db->query("UPDATE adress SET street=?, streetnr=?, door=?, zip=?, city=?, country=?, name=?, user_id=? WHERE id = ?", [
@@ -87,7 +89,7 @@ class Address
 
     public static function findByUser (int $user_id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM adress WHERE user_id=?', [
             'i:user_id' => $user_id

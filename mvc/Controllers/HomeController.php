@@ -1,16 +1,18 @@
 <?php
 
+namespace App\Controllers;
+
 class HomeController {
 
     public function index() {
-        $products = Product::all();
+        $products = \App\Models\Product::all();
 
         $params = [
             'htmltitle' => 'Startseite',
             'products' => $products
         ];
 
-        View::load('home', $params);
+        \App\Util\View::load('home', $params);
     }
 
 }

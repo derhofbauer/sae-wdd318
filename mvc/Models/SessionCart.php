@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class SessionCart extends Cart {
 
     public function __construct ()

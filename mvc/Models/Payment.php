@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Payment
 {
     public $id;
@@ -35,7 +37,7 @@ class Payment
 
     public function save ()
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         if (isset($this->id) && !empty($this->id)) {
             $db->query("UPDATE payments SET name=?, number=?, expires=?, ccv=?, user_id=? WHERE id = ?", [
@@ -64,7 +66,7 @@ class Payment
     {
         $user_id = (int)$user_id;
 
-        $db = new DB();
+        $db = new \App\Util\DB();
         $result = $db->query('SELECT * FROM payments where user_id=?', [
            'i:user_id' => $user_id
         ]);
@@ -74,7 +76,7 @@ class Payment
 
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM payments WHERE id = ?', [
             'i:id' => $id

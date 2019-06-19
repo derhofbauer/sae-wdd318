@@ -55,18 +55,21 @@ if ($controller === '') {
     die("Route not found!!");
     // oder: require_once 'errors/404.php';
 }
+$controller = 'App\\Controllers\\' . $controller;
 
-/**
+    /**
  * Autoloader
  */
 spl_autoload_register(function ($className) {
-    // Controller file muss genauso heißen wie die Controller-Klasse!!
-    @include_once __DIR__ . "/Controllers/{$className}.php";
-    @include_once __DIR__ . "/Models/{$className}.php";
-    @include_once __DIR__ . "/Util/{$className}.php";
+    $classNameOriginal = $className;
+    $className = str_replace("\\", "/", $className);
+    $className = str_replace('App', '', $className);
 
-    if (!class_exists($className)) {
-        die("Class not found!!");
+    // Controller file muss genauso heißen wie die Controller-Klasse!!
+    include_once __DIR__ . "{$className}.php";
+
+    if (!class_exists($classNameOriginal)) {
+        die("Class {$className} not found!!");
     }
 });
 

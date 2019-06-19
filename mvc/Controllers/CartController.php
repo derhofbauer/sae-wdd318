@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 class CartController
 {
 
@@ -9,7 +11,7 @@ class CartController
 
         $products = [];
         if (count($productIdsInCart) > 0) {
-            $products = Product::getByIds($productIdsInCart);
+            $products = \App\Models\Product::getByIds($productIdsInCart);
         }
 
         $total = 0;
@@ -24,7 +26,7 @@ class CartController
             'total' => $total
         ];
 
-        View::load('cart', $params);
+        \App\Util\View::load('cart', $params);
     }
 
     public function addProduct ($id)
@@ -36,7 +38,7 @@ class CartController
         // user eingeloggt, verwende DbCart
         //} else {
         // user nicht eingeloggt, verwende SessionCart
-        $cart = new SessionCart();
+        $cart = new \App\Models\SessionCart();
         $cart->addProduct($id);
 
         // var_dump($cart);
@@ -50,7 +52,7 @@ class CartController
     {
         $id = (int)$id;
 
-        $cart = new SessionCart();
+        $cart = new \App\Models\SessionCart();
         $cart->removeProduct($id);
 
         header("Location: " . APP_BASE . "cart");
@@ -73,7 +75,7 @@ class CartController
     public function incrementProduct ($id) {
         $id = (int)$id;
 
-        $cart = new SessionCart();
+        $cart = new \App\Models\SessionCart();
         $cart->addProduct($id, 1);
 
         header("Location: " . APP_BASE . "cart");
@@ -83,7 +85,7 @@ class CartController
     public function decrementProduct ($id) {
         $id = (int)$id;
 
-        $cart = new SessionCart();
+        $cart = new \App\Models\SessionCart();
         $cart->removeProduct($id, 1);
 
         header("Location: " . APP_BASE . "cart");

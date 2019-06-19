@@ -1,10 +1,12 @@
 <?php
 
+namespace App\Models;
+
 class Admin extends User
 {
     public static function findByEmail (string $email)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM admin_users WHERE email = ?', [
             's:email' => trim($email)
@@ -28,7 +30,7 @@ class Admin extends User
      */
     public static function find (int $id)
     {
-        $db = new DB();
+        $db = new \App\Util\DB();
 
         $result = $db->query('SELECT * FROM admin_users WHERE id = ?', [
             'i:id' => $id

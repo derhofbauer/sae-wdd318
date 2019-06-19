@@ -1,17 +1,19 @@
 <?php
 
+namespace App\Controllers;
+
 class ProductController {
 
     public function show ($id) {
         $id = (int)$id;
 
-        $product = Product::find($id);
+        $product = \App\Models\Product::find($id);
 
         $params = [
             'product' => $product
         ];
 
-        View::load('product.detail', $params);
+        \App\Util\View::load('product.detail', $params);
     }
 
     public function list () {
@@ -20,31 +22,31 @@ class ProductController {
     }
 
     public function adminList () {
-        $products = Product::all();
+        $products = \App\Models\Product::all();
 
         $params = [
             'products' => $products
         ];
 
-        View::load('admin/products.list', $params);
+        \App\Util\View::load('admin/products.list', $params);
     }
 
     public function editForm ($id) {
         $id = (int)$id;
 
-        $product = Product::find($id);
+        $product = \App\Models\Product::find($id);
 
         $params = [
             'product' => $product
         ];
 
-        View::load('admin/products.edit', $params);
+        \App\Util\View::load('admin/products.edit', $params);
     }
 
     public function updateProduct ($id) {
         $id = (int)$id;
 
-        $product = Product::find($id);
+        $product = \App\Models\Product::find($id);
 
         $product->name = trim($_POST['name']);
         $product->price = (float)$_POST['price'];
@@ -83,7 +85,7 @@ class ProductController {
 
     public function addForm () {
         if (isset($_POST['name'])) {
-            $new_product = new Product();
+            $new_product = new \App\Models\Product();
 
             $new_product->name = $_POST['name'];
             $new_product->price = $_POST['price'];
@@ -97,14 +99,14 @@ class ProductController {
             header("Location: " . APP_BASE . "admin/products");
             exit;
         } else {
-            View::load('admin/products.add', []);
+            \App\Util\View::load('admin/products.add', []);
         }
     }
 
     public function delete ($id) {
         $id = (int)$id;
 
-        $product = Product::find($id);
+        $product = \App\Models\Product::find($id);
         $product->deleted = true;
         $product->save();
 
