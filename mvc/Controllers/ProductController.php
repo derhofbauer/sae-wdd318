@@ -113,4 +113,45 @@ class ProductController {
         header("Location: " . APP_BASE . "admin/products");
         exit;
     }
+
+    /**
+     * wird nicht funktionieren, weil es nur ein beispielinhalt ist!!!
+     */
+    public function filter () {
+        $sizes = $_POST['size']; // size[38] => 'On', size[42] => 'On'
+        $colors = $_POST['color']; // color[black] => 'On', color[white] => 'On'
+        $new = $_POST['new'];
+
+        $sql = [];
+        $sql[] = "SELECT * FROM products WHERE ";
+
+        // size
+        $sql[] = "size IN (";
+        $sizes_sql = [];
+        foreach ($sizes as $size => $on) {
+            $s = str_replace('size[', $size);
+            $s = str_replace(']', $s);
+            $sizes_sql[] = $s;
+        }
+        $sql[] = implode(',', $sizes_sql);
+        $sql[] = ") "; // "SELECT * FROM products WHERE size IN (38,42)"
+
+        // colors
+        $sql[] = "AND color IN (";
+        $colors_sql = [];
+        foreach ($colors as $color => $on) {
+            $c = str_replace('color[', $color); // black]
+            $c = str_replace(']', $c); // black
+            $colors_sql[] = $c;
+        }
+        $sql[] = implode(',', $sizes_sql);
+        $sql[] = ") "; // "SELECT * FROM products WHERE size IN (38,42) AND color IN ("white","black")"
+
+        // new
+        if ($new === "on") {
+            $sql[] = "AND new IS TRUE"; // "SELECT * FROM products WHERE size IN (38,42) AND color IN ("white","black") AND new IS TRUE"
+        }
+
+        $sql = implode('', $sql); // <-- erst jetzt haben wir einen einzelnen String, bisher war es ein Array
+    }
 }

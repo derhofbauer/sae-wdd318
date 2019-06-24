@@ -1,0 +1,52 @@
+<div class="filter-element size-38 size-42 color-white color-black">
+    // ....
+</div>
+<div class="filter-element size-38 color-white"></div>
+<div class="filter-element color-black"></div>
+<div class="filter-element size-42"></div>
+
+----------------------
+
+// Filter size[38], color[white]
+
+<input type="checkbox" value="size[38]">
+
+----------------------
+
+<script>
+const filter = () => {
+
+    var $checkedCheckboxes = document.querySelectorAll('.sidebar input[type="checkbox"]:checked')
+    var selectedFilters = []
+
+    $checkedCheckboxes.forEach(function(checkbox) {
+        selectedFilters[] = checkbox.value.replace('[', '-').replace(']', '') // size[38] => size-38
+    })
+
+    // selectedFilters: ['size-38', 'color-white']
+    
+    var $products = document.querySelectorAll('.product')
+    $products.forEach(function (product) {
+        selectedFilters.forEach(function (filter) {
+            if (!product.classList.contains(filter)) {
+                product.classList.add('hidden')
+            }
+        })
+    })
+
+}
+
+document.querySelectorAll('.sidebar input[type="checkbox"]').addEventListener('change', filter)
+
+const unfilter = () => {
+    var $products = document.querySelectorAll('.product')
+    $products.forEach(function (product) {
+        product.classList.remove('hidden')
+    })
+
+    var $checkedCheckboxes = document.querySelectorAll('.sidebar input[type="checkbox"]:checked')
+    $checkedCheckboxes.forEach(function (checkbox) {
+        checkbox.checked = fals
+    })
+}
+</script>
