@@ -1,0 +1,15 @@
+{
+    "name": "alexander/mvc",
+    "description": "demo",
+    "type": "demo",
+    "authors": [
+        {
+            "name": "Alexander Hofbauer",
+            "email": "hofbauer.alexander@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "mpdf/mpdf": "8.0.*"
+    }
+}

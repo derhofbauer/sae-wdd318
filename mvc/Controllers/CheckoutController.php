@@ -141,7 +141,7 @@ class CheckoutController
     public function finish ($order_id) {
         $order_id = (int)$order_id;
 
-        $order = Order::find($order_id);
+        $order = \App\Models\Order::find($order_id);
         $order->status = 'in progress';
         $order->save();
 
@@ -152,5 +152,43 @@ class CheckoutController
         ];
 
         \App\Util\View::load('checkout/thankyou', $params);
+    }
+
+    public function pdfFromOrder ($order_id) {
+        $order_id = (int)$order_id;
+
+        $order = \App\Models\Order::find($order_id);
+        $address = \App\Models\Address::find($order->delivery_address_id);
+
+        $products = [];
+
+        $total_price = 0;
+        foreach ($order->getProductsArray() as $product_id => $amount) {
+            $product = \App\Models\Product::find($product_id);
+            $product->amount = $amount;
+            $products[] = $product;
+
+            $subtotal = $product->price * $amount;
+            $total_price = $total_price + $subtotal;
+        }
+
+        $mpdf = new \Mpdf\Mpdf([
+            'tempDir' => __DIR__ . '/../Assets/tmp'
+        ]);
+        $mpdf->WriteHTML("<h1>Rechnung #$order->id</h1>");
+        $mpdf->WriteHTML("<b>Adresse:</b>");
+        $mpdf->WriteHTML($address->name);
+        $mpdf->WriteHTML($address->street . ' ' . $address->streetNr);
+        $mpdf->WriteHTML($address->zip . ' ' . $address->city);
+        $mpdf->WriteHTML($address->country);
+
+        $mpdf->WriteHTML('<br>');
+
+        foreach ($products as $product) {
+            $mpdf->WriteHTML("$product->amount x $product->name - " . $product->amount * $product->price);
+        }
+        $mpdf->WriteHTML("Summe: " . $total_price);
+
+        $mpdf->output();
     }
 }

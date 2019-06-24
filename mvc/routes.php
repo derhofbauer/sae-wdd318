@@ -41,7 +41,8 @@ $routes = [
     "/checkout/address" => "CheckoutController.addAddress",
     "/checkout/payment/:id" => "CheckoutController.addPayment",
     "/checkout/summary/:id" => "CheckoutController.summary",
-    "/checkout/place/:id" => "CheckoutController.finish"
+    "/checkout/place/:id" => "CheckoutController.finish",
+    "/checkout/pdf/:id" => "CheckoutController.pdfFromOrder"
     // ...
 ];
 
