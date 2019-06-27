@@ -10,3 +10,9 @@ Wer gerne Docker/Docker Compose nutzen möchte, findet ein entsprechendes File i
 
 ### Database
 + MariaDB: [localhost:3306](localhost:3306)
+
+## Nützliche Informationen
+
+### Alternative Datenbanksysteme
+
++ PostgreSQL (bspw. Volltextsuche): https://www.postgresql.org/
