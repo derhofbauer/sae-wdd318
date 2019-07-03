@@ -146,7 +146,7 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`id`, `name`, `number`, `expires`, `ccv`, `user_id`) VALUES
-(1, 'Alexander Hofbauer', 1239128376, '12/2020', 993, 1);
+(1, 'Arthur Dent', 1239128376, '12/2020', 993, 1);
 
 -- --------------------------------------------------------
 
